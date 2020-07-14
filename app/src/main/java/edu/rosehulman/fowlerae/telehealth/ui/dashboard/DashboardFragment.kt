@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import edu.rosehulman.fowlerae.telehealth.R
 
-class DashboardFragment : Fragment() {
+class DashboardFragment(uid: String) : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
 
