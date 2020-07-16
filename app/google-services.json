@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "280117042643",
+    "firebase_url": "https://telehealth-android.firebaseio.com",
+    "project_id": "telehealth-android",
+    "storage_bucket": "telehealth-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280117042643:android:74daf30f57dae5e1a56326",
+        "android_client_info": {
+          "package_name": "edu.rosehulman.fowlerae.telehealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280117042643-qdfvd30vr8hi9bmbhjb7ms1e85deape2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.rosehulman.fowlerae.telehealth",
+            "certificate_hash": "c9959410214525a88e7ea516e8e3bae848d9b922"
+          }
+        },
+        {
+          "client_id": "280117042643-84lcp724gv4b421s70smjjg589m89p0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXlb0cAmUY7MRab9X4kXzv1c9-gHnsw1k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280117042643-84lcp724gv4b421s70smjjg589m89p0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

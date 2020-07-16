@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/setting_card_view"
+    app:cardElevation="3dp"
+    android:padding="4dp"
+    tools:context="edu.rosehulman.fowlerae.telehealth.ui.settings.SettingsFragment"
+    android:layout_marginHorizontal="4dp"
+    tools:showIn="@layout/fragment_home">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@drawable/ic_baseline_account_circle_24">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/setting_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Log out"
+        android:layout_centerInParent="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</androidx.cardview.widget.CardView>
