@@ -61,7 +61,7 @@ class SymptomAdapter(val context: Context) : RecyclerView.Adapter<SymptomViewHol
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, index: Int): SymptomViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.badge_card_view, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.symptom_card_view, parent, false)
         return SymptomViewHolder(view, this)
     }
 

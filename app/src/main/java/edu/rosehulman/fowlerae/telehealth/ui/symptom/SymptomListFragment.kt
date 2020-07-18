@@ -31,7 +31,6 @@ class SymptomListFragment  : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_symptom_list, container, false)
-        //val recyclerView = root.findViewID(R.id.symptom_recycler_view) as RecyclerView
         val recyclerView = root.findViewById<RecyclerView>(R.id.symptom_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL, false)
         adapter = context?.let {SymptomAdapter((it))}!!
