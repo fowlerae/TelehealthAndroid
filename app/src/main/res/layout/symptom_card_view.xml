@@ -36,7 +36,7 @@
             android:text="8pm"
             android:layout_alignLeft="@+id/medication_name"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="140dp"
+            android:layout_marginLeft="200dp"
             android:textSize="18sp" />
 
     </RelativeLayout>
