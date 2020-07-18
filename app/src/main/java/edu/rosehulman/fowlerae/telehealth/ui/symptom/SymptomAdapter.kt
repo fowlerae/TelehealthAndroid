@@ -10,7 +10,8 @@ import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import edu.rosehulman.fowlerae.telehealth.ui.home.Badge
 
-class SymptomAdapter(val context: Context) : RecyclerView.Adapter<SymptomViewHolder>() {
+class SymptomAdapter(val context: Context, val listener: onSymptomSelectedListener) :
+    RecyclerView.Adapter<SymptomViewHolder>() {
     private val symptoms = ArrayList<Symptom>()
     private val symptomsRef = FirebaseFirestore
         .getInstance()
@@ -85,6 +86,17 @@ class SymptomAdapter(val context: Context) : RecyclerView.Adapter<SymptomViewHol
 
     private fun delete(position: Int) {
         symptomsRef.document(symptoms[position].id).delete()
+    }
+
+    fun selectSymptom(position: Int) {
+        //  this.symptoms[position]
+        listener.onSymptomSelected(this.symptoms[position])
+
+    }
+
+    interface onSymptomSelectedListener {
+        fun onSymptomSelected(symptom: Symptom)
+
     }
 
 }
