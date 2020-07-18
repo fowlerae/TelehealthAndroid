@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/symptom_card_view"
+    app:cardElevation="3dp"
+    android:layout_margin="7dp"
+    tools:context="edu.rosehulman.fowlerae.telehealth.ui.symptom.SymptomListFragment"
+    android:layout_marginHorizontal="4dp"
+    tools:showIn="@layout/fragment_symptom_list">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/symptom_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="7dp"
+            android:text="Symptom name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sympton_pain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="8pm"
+            android:layout_alignLeft="@+id/medication_name"
+            android:layout_marginLeft="140dp"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

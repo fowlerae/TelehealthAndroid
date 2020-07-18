@@ -1,22 +1,33 @@
 package edu.rosehulman.fowlerae.telehealth.ui.home
 
 import android.media.Image
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CalendarView
 import android.widget.ImageView
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.fowlerae.telehealth.R
+import edu.rosehulman.fowlerae.telehealth.ui.symptom.Date
+import edu.rosehulman.fowlerae.telehealth.ui.symptom.Symptom
+import edu.rosehulman.fowlerae.telehealth.ui.symptom.SymptomListFragment
 import kotlinx.android.synthetic.main.fragment_home.view.*
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 
 class HomeFragment : Fragment() {
     private lateinit var adapter: BadgeAdapter
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -29,6 +40,24 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
       //  recyclerView.setHasFixedSize(true)
         adapter.addSnapshotListener()
+        val calendarView = root.findViewById<CalendarView>(R.id.calendar_view)
+        var date = calendarView.date
+        calendarView.setOnDateChangeListener { view, year, month ,dayOfMonth ->
+            var date = LocalDate.of(year, month, dayOfMonth)
+//            val formatter : DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM dd, YYYYY")
+//            val output:String = formatter.format(date)
+            onDateSelected(Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM))))
+        }
         return root
+    }
+
+    private fun onDateSelected(date: Date) {
+        val fragment :SymptomListFragment =  SymptomListFragment.newInstance(date)
+        val fragmentManager : FragmentManager = parentFragmentManager
+        fragmentManager.beginTransaction()
+            .replace(R.id.nav_host_fragment, fragment)
+            .addToBackStack("date")
+            .commit()
+
     }
 }
