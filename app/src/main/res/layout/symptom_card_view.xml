@@ -35,6 +35,7 @@
             android:layout_centerVertical="true"
             android:text="8pm"
             android:layout_alignLeft="@+id/medication_name"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="140dp"
             android:textSize="18sp" />
 
