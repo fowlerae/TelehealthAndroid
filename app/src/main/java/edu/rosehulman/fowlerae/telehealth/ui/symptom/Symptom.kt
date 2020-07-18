@@ -1,10 +1,11 @@
 package edu.rosehulman.fowlerae.telehealth.ui.symptom
 
 import android.os.Parcelable
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.Exclude
 import kotlinx.android.parcel.Parcelize
-import java.sql.Timestamp
+
 
 @Parcelize
 data class Symptom(var name: String = "") : Parcelable {
