@@ -93,7 +93,7 @@ class AddSymptomAdapter(val context: Context, val date: Date) :
 
     fun selectSymptom(position: Int) {
         //  this.symptoms[position]
-        //   listener.onSymptomSelected(this.symptoms[position])
+        //  listener.onSymptomSelected(this.symptoms[position])
 
     }
 
