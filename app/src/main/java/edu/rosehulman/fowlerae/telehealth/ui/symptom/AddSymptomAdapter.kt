@@ -22,7 +22,8 @@ class AddSymptomAdapter(val context: Context, val date: Date) :
     private lateinit var listenerRegistration: ListenerRegistration
 
     fun addSnapshotListener() {
-        listenerRegistration = symptomsRef.whereEqualTo("date", date.name)
+        listenerRegistration = symptomsRef
+            .whereEqualTo("date", date.name)
             .orderBy(Symptom.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
             .addSnapshotListener { querySnapshot, e ->
                 if (e != null) {

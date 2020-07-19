@@ -1,25 +1,21 @@
 package edu.rosehulman.fowlerae.telehealth.ui.home
 
-import android.media.Image
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
-import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import edu.rosehulman.fowlerae.telehealth.ui.symptom.Date
-import edu.rosehulman.fowlerae.telehealth.ui.symptom.Symptom
 import edu.rosehulman.fowlerae.telehealth.ui.symptom.SymptomListFragment
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
@@ -46,7 +42,10 @@ class HomeFragment : Fragment() {
             var date = LocalDate.of(year, month, dayOfMonth)
 //            val formatter : DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM dd, YYYYY")
 //            val output:String = formatter.format(date)
-            onDateSelected(Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM))))
+            var formattedDate =
+                Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)))
+            Log.d(Constants.TAG, "Date: $formattedDate")
+            onDateSelected(formattedDate)
         }
         return root
     }

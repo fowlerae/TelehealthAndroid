@@ -5,7 +5,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.*
+import com.google.firebase.firestore.DocumentChange
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.QuerySnapshot
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import edu.rosehulman.fowlerae.telehealth.ui.home.Badge
@@ -26,8 +29,7 @@ class SymptomAdapter(
     private lateinit var listenerRegistration: ListenerRegistration
 
     fun addSnapshotListener() {
-        listenerRegistration = symptomsRef.whereEqualTo("date", date.name)
-            .orderBy(Symptom.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
+        listenerRegistration = symptomsRef.whereEqualTo("name", date.name)
             .addSnapshotListener { querySnapshot, e ->
                 if (e != null) {
                     Log.w(Constants.TAG, "listen error", e)
