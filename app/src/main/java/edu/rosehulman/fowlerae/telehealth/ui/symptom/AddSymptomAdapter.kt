@@ -17,6 +17,8 @@ class AddSymptomAdapter(val context: Context, val date: Date) :
         .getInstance()
         .collection("users")
         .document("UGSe2Si5KAsB0sQb9Gf7")
+        .collection("dates")
+        .document("${date.name}")
         .collection("symptoms")
 
     private lateinit var listenerRegistration: ListenerRegistration
