@@ -53,6 +53,17 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
             listAdapter.addSymptom()
         }
 
+        val qualitySleepCardView: CardView =
+            root.findViewById(R.id.add_quality_of_sleep_button_card)
+        qualitySleepCardView.setOnClickListener {
+            if (date.qualityOfSleep != null) {
+                listAdapter.showAddEditDialog(1)
+            } else {
+                listAdapter.showAddEditDialog(-1)
+            }
+
+        }
+
         return root
 
     }
@@ -84,7 +95,5 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
 
     }
 
-    fun editAddQualityOfSleep() {
 
-    }
 }

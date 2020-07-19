@@ -31,4 +31,7 @@
     <string name="enter_a_shape">Enter a shape</string>
     <string name="enter_a_dosage">Enter a dosage</string>
     <string name="enter_a_name">Enter a dosage</string>
+    <string name="enter_a_frequency">Enter a frequency</string>
+    <string name="add_sleep_dialog_title">Add Quality of Sleep</string>
+    <string name="edit_sleep_dialog_title">Edit Quality of Sleep</string>
 </resources>

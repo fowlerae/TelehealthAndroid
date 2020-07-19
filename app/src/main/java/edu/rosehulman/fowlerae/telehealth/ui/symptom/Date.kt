@@ -5,6 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Date(var name : String = "") : Parcelable {
+    var qualityOfSleep: Int? = null
 //    @get:Exclude
 //    var id = ""
 //    var lastTouched: Timestamp? = null

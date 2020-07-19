@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.*
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
-import kotlinx.android.synthetic.main.dialog_add.view.*
+import kotlinx.android.synthetic.main.dialog_add_medication.view.*
 
 class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationViewHolder>() {
     private val medications = ArrayList<Medication>()
@@ -101,7 +101,7 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
         // pos of -1 means add
         val builder = AlertDialog.Builder(context)
         builder.setTitle(if (position < 0) R.string.add_dialog_title else R.string.edit_dialog_title)
-        val view = LayoutInflater.from(context).inflate(R.layout.dialog_add, null, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.dialog_add_medication, null, false)
         builder.setView(view)
         if (position >= 0) {
             view.name_edit_text.setText(medications[position].name)
