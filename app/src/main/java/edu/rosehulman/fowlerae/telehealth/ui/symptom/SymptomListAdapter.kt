@@ -116,7 +116,8 @@ class SymptomListAdapter(
         // pos of -1 means add
         val builder = AlertDialog.Builder(context)
         builder.setTitle(if (position < 0) R.string.add_sleep_dialog_title else R.string.edit_sleep_dialog_title)
-        val view = LayoutInflater.from(context).inflate(R.layout.dialog_add_medication, null, false)
+        val view =
+            LayoutInflater.from(context).inflate(R.layout.dialog_add_quality_of_sleep, null, false)
         builder.setView(view)
         if (position >= 0) {
             if (date.qualityOfSleep != null) {
