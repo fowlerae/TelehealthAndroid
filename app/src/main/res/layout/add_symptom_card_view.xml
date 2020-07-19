@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/add_symptom_card_view"
+    app:cardElevation="3dp"
+    android:padding="4dp"
+    tools:context="edu.rosehulman.fowlerae.telehealth.ui.symptom.AddSymptomFragment"
+    android:layout_marginHorizontal="4dp"
+    tools:showIn="@layout/fragment_add_symptom">
+
+    <TextView
+        android:id="@+id/add_symptom_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Symptom"
+        android:layout_centerInParent="true"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</androidx.cardview.widget.CardView>
