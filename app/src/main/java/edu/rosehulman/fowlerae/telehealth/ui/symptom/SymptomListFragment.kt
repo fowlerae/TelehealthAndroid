@@ -2,6 +2,7 @@ package edu.rosehulman.fowlerae.telehealth.ui.symptom
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 
 private const val ARG_DATE = "date"
@@ -57,5 +59,6 @@ class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener
             .replace(R.id.nav_host_fragment, fragment)
             .addToBackStack("symptom")
             .commit()
+        Log.d(Constants.TAG, "Adding symptom fragment")
     }
 }
