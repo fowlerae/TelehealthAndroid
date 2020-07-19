@@ -28,6 +28,7 @@ class SymptomFragment() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val root = inflater.inflate(R.layout.fragment_symptom, container, false)
-        return root
+        date.text =
+            return root
     }
 }
