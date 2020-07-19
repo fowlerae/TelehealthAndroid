@@ -39,11 +39,11 @@ class HomeFragment : Fragment() {
         val calendarView = root.findViewById<CalendarView>(R.id.calendar_view)
         var date = calendarView.date
         calendarView.setOnDateChangeListener { view, year, month ,dayOfMonth ->
-            var date = LocalDate.of(year, month, dayOfMonth)
+            var date = LocalDate.of(year, month + 1, dayOfMonth)
 //            val formatter : DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM dd, YYYYY")
 //            val output:String = formatter.format(date)
             var formattedDate =
-                Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)))
+                Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)))
             Log.d(Constants.TAG, "Date: $formattedDate")
             onDateSelected(formattedDate)
         }
