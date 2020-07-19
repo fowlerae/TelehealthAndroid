@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Add Symptom"
+                    android:text="Report Symptom"
                     android:layout_centerInParent="true"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="60dp"
-                    android:layout_alignEnd="@+id/add_symptom_text_view"
+                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_baseline_add_24" />
             </RelativeLayout>

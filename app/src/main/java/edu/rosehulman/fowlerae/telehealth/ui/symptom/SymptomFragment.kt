@@ -12,12 +12,18 @@ private const val ARG_SYMPTOM = "symptom"
 
 class SymptomFragment() : Fragment() {
 
+    lateinit var date: Date
+
     companion object {
         @JvmStatic
-        fun newInstance(symptom: Symptom) =
+        fun newInstance(
+            symptom: Symptom,
+            d: Date
+        ) =
             SymptomFragment().apply {
                 arguments = Bundle().apply {
                     putParcelable(ARG_SYMPTOM, symptom)
+                    date = d
                 }
             }
     }

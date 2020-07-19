@@ -63,16 +63,24 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
     }
 
     override fun onSymptomSelected(symptom: Symptom) {
-        val fragment = AddSymptomFragment.newInstance(symptom, date)
+        val fragment = SymptomFragment.newInstance(symptom, date)
         val ft: FragmentManager = parentFragmentManager
         ft.beginTransaction()
             .replace(R.id.nav_host_fragment, fragment)
             .addToBackStack("symptom")
             .commit()
-        Log.d(Constants.TAG, "Adding add symptom fragment")
+        Log.d(Constants.TAG, "Adding symptom fragment")
+
     }
 
     override fun onAddSymptomSelected() {
+        val fragment = AddSymptomFragment.newInstance(date)
+        val ft: FragmentManager = parentFragmentManager
+        ft.beginTransaction()
+            .replace(R.id.nav_host_fragment, fragment)
+            .addToBackStack("date")
+            .commit()
+        Log.d(Constants.TAG, "Adding add symptom fragment")
 
     }
 }
