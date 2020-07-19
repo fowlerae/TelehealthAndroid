@@ -8,11 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.*
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
-import edu.rosehulman.fowlerae.telehealth.ui.home.Badge
 
 class SymptomListAdapter(
     val context: Context,
-    val listener: onSymptomSelectedListener,
+    val listener: OnSymptomListener,
     val date: Date
 ) :
     RecyclerView.Adapter<SymptomListViewHolder>() {
@@ -80,12 +79,12 @@ class SymptomListAdapter(
 
     override fun getItemCount() = symptoms.size
 
-    fun add(badge: Badge) {
-        symptomsRef.add(badge)
+    fun add(symptom: Symptom) {
+        symptomsRef.add(symptom)
     }
 
-    private fun edit(badges: String, position: Int) {
-        this.symptoms[position].name = badges
+    private fun edit(symptom: String, position: Int) {
+        this.symptoms[position].name = symptom
         symptomsRef.document(this.symptoms[position].id).set(this.symptoms[position])
     }
 
@@ -99,9 +98,15 @@ class SymptomListAdapter(
 
     }
 
-    interface onSymptomSelectedListener {
+    fun addSymptom() {
+        listener.onAddSymptomSelected()
+    }
+
+    interface OnSymptomListener {
         fun onSymptomSelected(symptom: Symptom)
+        fun onAddSymptomSelected()
 
     }
+
 
 }

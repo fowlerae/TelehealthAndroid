@@ -19,12 +19,11 @@ class AddSymptomFragment() : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(
-            symptom: Symptom,
             d: Date
         ) =
             AddSymptomFragment().apply {
                 arguments = Bundle().apply {
-                    putParcelable(ARG_SYMPTOM, symptom)
+                    putParcelable(ARG_DATE, d)
                     date = d
                 }
             }

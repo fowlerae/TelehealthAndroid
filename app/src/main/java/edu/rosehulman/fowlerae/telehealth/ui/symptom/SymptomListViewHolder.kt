@@ -4,20 +4,24 @@ import android.view.View
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-
+import edu.rosehulman.fowlerae.telehealth.R
 import kotlinx.android.synthetic.main.symptom_card_view.view.*
 
 class SymptomListViewHolder(itemView: View, private val symptomListAdapter: SymptomListAdapter) :
     RecyclerView.ViewHolder(itemView) {
     private var cardView: CardView = itemView.symptom_card_view
     private val nameTextView: TextView? =
-        itemView.findViewById(edu.rosehulman.fowlerae.telehealth.R.id.symptom_name_text_view)
+        itemView.findViewById(R.id.symptom_name_text_view)
     private val painTextView: TextView? =
-        itemView.findViewById(edu.rosehulman.fowlerae.telehealth.R.id.symptom_pain)
+        itemView.findViewById(R.id.symptom_pain)
+    private val addCardView: CardView = itemView.findViewById(R.id.add_symptom_button_card)
 
     init {
         itemView.setOnClickListener {
             symptomListAdapter.selectSymptom(adapterPosition)
+        }
+        addCardView.setOnClickListener {
+            symptomListAdapter.addSymptom()
         }
     }
 

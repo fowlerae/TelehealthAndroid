@@ -16,10 +16,10 @@ import edu.rosehulman.fowlerae.telehealth.R
 
 private const val ARG_DATE = "date"
 
-class SymptomListFragment : Fragment(), SymptomListAdapter.onSymptomSelectedListener {
+class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
     lateinit var date: Date
     private lateinit var listAdapter: SymptomListAdapter
-    private var listener: SymptomListAdapter.onSymptomSelectedListener? = null
+    private var listener: SymptomListAdapter.OnSymptomListener? = null
 
     companion object {
         @JvmStatic
@@ -56,12 +56,22 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.onSymptomSelectedList
     }
 
     override fun onSymptomSelected(symptom: Symptom) {
-        val fragment = AddSymptomFragment.newInstance(symptom, date)
+        val fragment = SymptomFragment.newInstance(symptom)
         val ft: FragmentManager = parentFragmentManager
         ft.beginTransaction()
             .replace(R.id.nav_host_fragment, fragment)
             .addToBackStack("symptom")
             .commit()
         Log.d(Constants.TAG, "Adding symptom fragment")
+    }
+
+    override fun onAddSymptomSelected() {
+        val fragment = AddSymptomFragment.newInstance(date)
+        val ft: FragmentManager = parentFragmentManager
+        ft.beginTransaction()
+            .replace(R.id.nav_host_fragment, fragment)
+            .addToBackStack("symptom")
+            .commit()
+        Log.d(Constants.TAG, "Adding add symptom fragment")
     }
 }
