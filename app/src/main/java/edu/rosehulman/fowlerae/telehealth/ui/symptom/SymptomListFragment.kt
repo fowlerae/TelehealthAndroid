@@ -56,7 +56,7 @@ class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener
         val fragment = SymptomFragment.newInstance(symptom)
         val ft: FragmentManager = parentFragmentManager
         ft.beginTransaction()
-            .replace(R.id.symptom_list_view, fragment)
+            .replace(R.id.nav_host_fragment, fragment)
             .addToBackStack("symptom")
             .commit()
         Log.d(Constants.TAG, "Adding symptom fragment")
