@@ -83,4 +83,8 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         Log.d(Constants.TAG, "Adding add symptom fragment")
 
     }
+
+    fun editAddQualityOfSleep() {
+
+    }
 }

@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:layout_alignEnd="@+id/add_symptom_name"
+            android:layout_alignRight="@+id/add_symptom_name"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_baseline_close_24" />
 

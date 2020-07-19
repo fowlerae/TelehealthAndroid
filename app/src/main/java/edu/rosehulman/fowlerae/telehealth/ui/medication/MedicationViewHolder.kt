@@ -1,9 +1,9 @@
 package edu.rosehulman.fowlerae.telehealth.ui.medication
 
-import androidx.cardview.widget.CardView
-import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.fowlerae.telehealth.R
 import kotlinx.android.synthetic.main.medication_card_view.view.*
 
@@ -14,14 +14,10 @@ class MedicationViewHolder(itemView: View, private val medicationAdapter: Medica
     private var cardView: CardView
 
     init {
-//        itemView.setOnClickListener {
-//            listAdapter.selectMovieQuote(adapterPosition)
-//
-//        }
-//        itemView.setOnLongClickListener {
-//            listAdapter.showAddEditDialog(adapterPosition)
-//            true
-//        }
+        itemView.setOnClickListener {
+            medicationAdapter.showAddEditDialog(adapterPosition)
+
+        }
         cardView = itemView.medication_card_view
     }
 

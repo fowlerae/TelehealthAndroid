@@ -1,13 +1,16 @@
 package edu.rosehulman.fowlerae.telehealth.ui.medication
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.util.Log
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.*
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
+import kotlinx.android.synthetic.main.dialog_add.view.*
 
 class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationViewHolder>() {
     private val medications = ArrayList<Medication>()
@@ -81,17 +84,74 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
     override fun getItemCount() = medications.size
 
     fun add(medication: Medication) {
-        medications.add(0,medication)
+        medications.add(0, medication)
         medicationRef.add(medication)
     }
 
-    private fun edit(badges: String, position: Int) {
-        this.medications[position].name = badges
+    private fun edit(medication: Medication, position: Int) {
+        this.medications[position] = medication
         medicationRef.document(this.medications[position].id).set(this.medications[position])
     }
 
     private fun delete(position: Int) {
         medicationRef.document(medications[position].id).delete()
+    }
+
+    fun showAddEditDialog(position: Int) {
+        // pos of -1 means add
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle(if (position < 0) R.string.add_dialog_title else R.string.edit_dialog_title)
+        val view = LayoutInflater.from(context).inflate(R.layout.dialog_add, null, false)
+        builder.setView(view)
+        if (position >= 0) {
+            view.name_edit_text.setText(medications[position].name)
+            view.dosage_edit_text.setText(medications[position].dosage.toString())
+            view.frequency_edit_text.setText(medications[position].frequency)
+            view.description_edit_text.setText(medications[position].description)
+            view.shape_edit_text.setText(medications[position].shape)
+            view.color_edit_text.setText(medications[position].color)
+            view.prescribed_edit_text.setText(medications[position].prescribed.toString())
+            view.time_edit_text.setText(medications[position].time)
+
+        }
+        builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
+            val color = view.color_edit_text.text.toString()
+            val description = view.description_edit_text.text.toString()
+            val dosage: Double = view.dosage_edit_text.text.toString().toDouble()
+            val frequency: Int = view.frequency_edit_text.text.toString().toInt()
+            val frequency_interval = view.frequency_edit_text.text.toString()
+            val name = view.name_edit_text.text.toString()
+            val time = view.time_edit_text.text.toString()
+            var prescribed: Boolean = false
+            if (view.prescribed_edit_text.text.toString() == "Yes") {
+                prescribed = true
+            }
+            val shape = view.shape_edit_text.text.toString()
+            val medication = Medication(
+                color,
+                description,
+                dosage,
+                frequency,
+                frequency_interval,
+                name,
+                time,
+                prescribed,
+                shape
+            )
+            if (position < 0) {
+                add(medication)
+            } else {
+                edit(medication, position)
+            }
+        }
+        if (position >= 0) {
+            builder.setNeutralButton("Delete") { _, _ ->
+                delete(position)
+
+            }
+        }
+        builder.setNegativeButton(android.R.string.cancel, null)
+        builder.create().show()
     }
 
 

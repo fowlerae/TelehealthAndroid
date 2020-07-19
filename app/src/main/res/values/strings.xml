@@ -21,4 +21,14 @@
     <string name="add_edit_dialog_hint_movie">Enter movie</string>
     <string name="logout">Logout</string>
     <string name="name">Name</string>
+    <string name="add_dialog_title">Add Medication</string>
+    <string name="edit_dialog_title">Edit Medication</string>
+    <string name="enter_a_symptom">Enter a symptom</string>
+    <string name="enter_a_time">Enter a time</string>
+    <string name="enter_a_prescribed">Is this prescribed?</string>
+    <string name="enter_a_color">Enter a color</string>
+    <string name="enter_a_description">Enter a description</string>
+    <string name="enter_a_shape">Enter a shape</string>
+    <string name="enter_a_dosage">Enter a dosage</string>
+    <string name="enter_a_name">Enter a dosage</string>
 </resources>
