@@ -53,7 +53,7 @@ class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener
     }
 
     override fun onSymptomSelected(symptom: Symptom) {
-        val fragment = AddSymptomFragment.newInstance(symptom)
+        val fragment = AddSymptomFragment.newInstance(symptom, date)
         val ft: FragmentManager = parentFragmentManager
         ft.beginTransaction()
             .replace(R.id.nav_host_fragment, fragment)

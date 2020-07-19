@@ -10,7 +10,7 @@ import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import edu.rosehulman.fowlerae.telehealth.ui.home.Badge
 
-class AddSymptomAdapter(val context: Context) :
+class AddSymptomAdapter(val context: Context, val date: Date) :
     RecyclerView.Adapter<AddSymptomViewHolder>() {
     private val symptoms = ArrayList<Symptom>()
     private val symptomsRef = FirebaseFirestore
@@ -22,7 +22,7 @@ class AddSymptomAdapter(val context: Context) :
     private lateinit var listenerRegistration: ListenerRegistration
 
     fun addSnapshotListener() {
-        listenerRegistration = symptomsRef
+        listenerRegistration = symptomsRef.whereEqualTo("date", date.name)
             .orderBy(Symptom.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
             .addSnapshotListener { querySnapshot, e ->
                 if (e != null) {
@@ -85,7 +85,7 @@ class AddSymptomAdapter(val context: Context) :
         symptomsRef.document(this.symptoms[position].id).set(this.symptoms[position])
     }
 
-    private fun delete(position: Int) {
+    fun delete(position: Int) {
         symptomsRef.document(symptoms[position].id).delete()
     }
 

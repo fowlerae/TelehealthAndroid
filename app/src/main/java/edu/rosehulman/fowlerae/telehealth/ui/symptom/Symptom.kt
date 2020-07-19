@@ -8,7 +8,8 @@ import kotlinx.android.parcel.Parcelize
 
 
 @Parcelize
-data class Symptom(var name: String = "", var rating: Int = 0) : Parcelable {
+data class Symptom(var name: String = "", var rating: Int = 0, var date: String = "July 19, 2020") :
+    Parcelable {
     @get:Exclude
     var id = ""
     var lastTouched: Timestamp? = null
