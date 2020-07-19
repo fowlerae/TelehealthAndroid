@@ -1,7 +1,6 @@
 package edu.rosehulman.fowlerae.telehealth.ui.symptom
 
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -15,7 +14,7 @@ class SymptomListViewHolder(itemView: View, private val symptomListAdapter: Symp
         itemView.findViewById(R.id.symptom_name_text_view)
     private val painTextView: TextView? =
         itemView.findViewById(R.id.symptom_pain)
-    private val addCardView: ImageView? = itemView.findViewById(R.id.add_symptom_image_view)
+    private val addCardView: CardView? = itemView.findViewById(R.id.add_symptom_button_card)
 
     init {
         itemView.setOnClickListener {
