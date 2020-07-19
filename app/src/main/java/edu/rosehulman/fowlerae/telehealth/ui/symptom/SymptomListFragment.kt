@@ -16,10 +16,10 @@ import edu.rosehulman.fowlerae.telehealth.R
 
 private const val ARG_DATE = "date"
 
-class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener {
+class SymptomListFragment : Fragment(), SymptomListAdapter.onSymptomSelectedListener {
     lateinit var date: Date
-    private lateinit var adapter: SymptomAdapter
-    private var listener: SymptomAdapter.onSymptomSelectedListener? = null
+    private lateinit var listAdapter: SymptomListAdapter
+    private var listener: SymptomListAdapter.onSymptomSelectedListener? = null
 
     companion object {
         @JvmStatic
@@ -41,9 +41,9 @@ class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener
         val recyclerView = root.findViewById<RecyclerView>(R.id.symptom_recycler_view)
         recyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        adapter = context?.let { SymptomAdapter(it, this, date) }!!
-        recyclerView.adapter = adapter
-        adapter.addSnapshotListener()
+        listAdapter = context?.let { SymptomListAdapter(it, this, date) }!!
+        recyclerView.adapter = listAdapter
+        listAdapter.addSnapshotListener()
         val dateTextView = root.findViewById<TextView>(R.id.date_fragment_text_view)
         dateTextView.text = date.name
         return root

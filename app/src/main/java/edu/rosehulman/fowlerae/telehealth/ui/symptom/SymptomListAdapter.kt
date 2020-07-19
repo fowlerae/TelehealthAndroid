@@ -10,12 +10,12 @@ import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import edu.rosehulman.fowlerae.telehealth.ui.home.Badge
 
-class SymptomAdapter(
+class SymptomListAdapter(
     val context: Context,
     val listener: onSymptomSelectedListener,
     val date: Date
 ) :
-    RecyclerView.Adapter<SymptomViewHolder>() {
+    RecyclerView.Adapter<SymptomListViewHolder>() {
     private val symptoms = ArrayList<Symptom>()
     private val symptomsRef = FirebaseFirestore
         .getInstance()
@@ -66,13 +66,13 @@ class SymptomAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, index: Int): SymptomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, index: Int): SymptomListViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.symptom_card_view, parent, false)
-        return SymptomViewHolder(view, this)
+        return SymptomListViewHolder(view, this)
     }
 
     override fun onBindViewHolder(
-        listViewHolder: SymptomViewHolder,
+        listViewHolder: SymptomListViewHolder,
         index: Int
     ) {
         listViewHolder.bind(symptoms[index])
