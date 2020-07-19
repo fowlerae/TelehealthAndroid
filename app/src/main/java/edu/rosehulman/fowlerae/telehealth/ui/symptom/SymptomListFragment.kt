@@ -40,7 +40,7 @@ class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener
         val recyclerView = root.findViewById<RecyclerView>(R.id.symptom_recycler_view)
         recyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        adapter = context?.let { SymptomAdapter(it, this) }!!
+        adapter = context?.let { SymptomAdapter(it, this, date) }!!
         recyclerView.adapter = adapter
         adapter.addSnapshotListener()
         return root
