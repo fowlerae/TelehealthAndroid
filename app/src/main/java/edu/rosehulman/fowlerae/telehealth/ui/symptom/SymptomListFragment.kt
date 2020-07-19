@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,6 +47,12 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         listAdapter.addSnapshotListener()
         val dateTextView = root.findViewById<TextView>(R.id.date_fragment_text_view)
         dateTextView.text = date.name
+
+        val addCardView: CardView? = root.findViewById(R.id.add_symptom_button_card)
+        addCardView?.setOnClickListener {
+            listAdapter.addSymptom()
+        }
+
         return root
 
     }
