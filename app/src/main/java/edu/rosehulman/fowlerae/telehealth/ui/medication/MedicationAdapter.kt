@@ -106,7 +106,7 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
         if (position >= 0) {
             view.name_edit_text.setText(medications[position].name)
             view.dosage_edit_text.setText(medications[position].dosage.toString())
-            view.frequency_edit_text.setText(medications[position].frequency)
+            view.frequency_edit_text.setText(medications[position].frequency.toString())
             view.description_edit_text.setText(medications[position].description)
             view.shape_edit_text.setText(medications[position].shape)
             view.color_edit_text.setText(medications[position].color)

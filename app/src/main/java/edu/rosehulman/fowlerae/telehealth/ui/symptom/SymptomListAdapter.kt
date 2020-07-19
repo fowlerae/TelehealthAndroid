@@ -127,7 +127,10 @@ class SymptomListAdapter(
 
         }
         builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
-            date.qualityOfSleep = view.add_quality_of_sleep_text_view.text.toString().toInt()
+            val quality: String? = view.add_quality_of_sleep_text_view.text.toString()
+            if (quality != null) {
+                date.qualityOfSleep = quality.toInt()
+            }
         }
 //        if (position >= 0) {
 //            builder.setNeutralButton("Delete") { _, _ ->
