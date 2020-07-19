@@ -9,7 +9,7 @@
     android:padding="4dp"
     tools:context="edu.rosehulman.fowlerae.telehealth.ui.symptom.AddSymptomFragment"
     android:layout_marginHorizontal="4dp"
-    android:background="@color/add_symptom_card_color"
+    app:cardBackgroundColor="@color/add_symptom_card_color"
     tools:showIn="@layout/fragment_add_symptom">
 
     <RelativeLayout
@@ -24,7 +24,6 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:textSize="24sp"
-            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <ImageView
