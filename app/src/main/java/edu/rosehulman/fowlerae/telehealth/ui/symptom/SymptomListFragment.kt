@@ -54,7 +54,7 @@ class SymptomListFragment : Fragment(), SymptomAdapter.onSymptomSelectedListener
 
     override fun onSymptomSelected(symptom: Symptom) {
         val fragment = SymptomFragment.newInstance(symptom)
-        val ft: FragmentManager = childFragmentManager
+        val ft: FragmentManager = parentFragmentManager
         ft.beginTransaction()
             .replace(R.id.symptom_list_view, fragment)
             .addToBackStack("symptom")
