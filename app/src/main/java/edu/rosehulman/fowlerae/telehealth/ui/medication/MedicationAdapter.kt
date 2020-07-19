@@ -89,8 +89,9 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
     }
 
     private fun edit(medication: Medication, position: Int) {
-        this.medications[position] = medication
-        medicationRef.document(this.medications[position].id).set(this.medications[position])
+        Log.d(Constants.TAG, "ID: ${medication.id}")
+        Log.d(Constants.TAG, "Medication: $medication")
+        medicationRef.document(this.medications[position].id).set(medication)
     }
 
     private fun delete(position: Int) {
