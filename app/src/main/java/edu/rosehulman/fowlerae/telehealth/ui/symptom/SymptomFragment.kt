@@ -14,7 +14,7 @@ class SymptomFragment() : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(symptom: Symptom) =
-            SymptomListFragment().apply {
+            SymptomFragment().apply {
                 arguments = Bundle().apply {
                     putParcelable(ARG_SYMPTOM, symptom)
                 }
