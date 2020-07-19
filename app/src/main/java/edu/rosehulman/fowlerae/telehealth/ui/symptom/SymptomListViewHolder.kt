@@ -14,14 +14,14 @@ class SymptomListViewHolder(itemView: View, private val symptomListAdapter: Symp
         itemView.findViewById(R.id.symptom_name_text_view)
     private val painTextView: TextView? =
         itemView.findViewById(R.id.symptom_pain)
-    private val addCardView: CardView = itemView.findViewById(R.id.add_symptom_button_card)
+    private val addCardView: CardView? = itemView.findViewById(R.id.add_symptom_button_card)
 
     init {
 
         itemView.setOnClickListener {
             symptomListAdapter.selectSymptom(adapterPosition)
         }
-        addCardView.setOnClickListener {
+        addCardView?.setOnClickListener {
             symptomListAdapter.addSymptom()
         }
     }
