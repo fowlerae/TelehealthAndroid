@@ -9,15 +9,15 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Medication(
-    var color: String = "",
-    var description: String = "",
-    var dosage: Double = 0.0,
-    var frequency: Int = 0,
-    var frequency_interval: String = "",
-    var name: String = "",
-    var time: String = "",
-    var prescribed: Boolean = false,
-    var shape: String = ""
+    var color: String? = "",
+    var description: String? = "",
+    var dosage: Double? = 0.0,
+    var frequency: Int? = 0,
+    var frequency_interval: String? = "",
+    var name: String? = "",
+    var time: String? = "",
+    var prescribed: Boolean? = false,
+    var shape: String? = ""
 ) : Parcelable {
 
 
