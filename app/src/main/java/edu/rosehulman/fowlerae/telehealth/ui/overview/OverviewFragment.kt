@@ -1,13 +1,16 @@
 package edu.rosehulman.fowlerae.telehealth.ui.overview
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.ColorTemplate
 import edu.rosehulman.fowlerae.telehealth.R
 
 
@@ -28,9 +31,13 @@ class OverviewFragment : Fragment() {
         yValues.add(PieEntry(66f, "Kinondoni"))
         yValues.add(PieEntry(45f, "Kigamboni"))
         val dataSet = PieDataSet(yValues, "Number Of Employees")
-
-        val year = ArrayList<Any>()
-
+        dataSet.sliceSpace = 3f
+        dataSet.selectionShift = 5f
+        dataSet.setColors(*ColorTemplate.COLORFUL_COLORS)
+        val pieData = PieData(dataSet)
+        pieData.setValueTextSize(10f)
+        pieData.setValueTextColor(Color.YELLOW)
+        pieChart.data = pieData
         return root
     }
 }
