@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.*
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 import edu.rosehulman.fowlerae.telehealth.R
 
@@ -47,12 +48,12 @@ class OverviewFragment : Fragment() {
     private fun makeBarChart(root: View) {
         val barChart = root.findViewById(R.id.bar_chart) as BarChart
         val entries = ArrayList<BarEntry>()
-        entries.add(BarEntry(1f, 0.toFloat(), "18-Jan"))
-        entries.add(BarEntry(2f, 1.toFloat()))
-        entries.add(BarEntry(3f, 2.toFloat()))
-        entries.add(BarEntry(4f, 3.toFloat()))
-        entries.add(BarEntry(5f, 4.toFloat()))
-        entries.add(BarEntry(9f, 5.toFloat()))
+        entries.add(BarEntry(0f, 0.toFloat()))
+        entries.add(BarEntry(1f, 1.toFloat()))
+        entries.add(BarEntry(2f, 2.toFloat()))
+        entries.add(BarEntry(3f, 3.toFloat()))
+        entries.add(BarEntry(4f, 4.toFloat()))
+        entries.add(BarEntry(5f, 5.toFloat()))
 
         val barDataSet = BarDataSet(entries, "Pain Rating")
         val data = BarData(barDataSet)
@@ -64,6 +65,8 @@ class OverviewFragment : Fragment() {
         labels.add("21-Jan")
         labels.add("22-Jan")
         labels.add("23-Jan")
+
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(labels);
         data.setValueTextSize(10f)
         data.setValueTextColor(Color.YELLOW)
         barDataSet.color = resources.getColor(R.color.colorAccent)
