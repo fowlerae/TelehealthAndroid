@@ -23,13 +23,6 @@ class OverviewFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_overview, container, false)
         makePieChart(root)
-
-
-
-
-
-
-
         return root
     }
 
@@ -61,20 +54,14 @@ class OverviewFragment : Fragment() {
         entries.add(BarEntry(19f, 5.toFloat()))
 
         val barDataSet = BarDataSet(entries, "Cells")
-
-        val labels = ArrayList<String>()
-        labels.add("18-Jan")
-        labels.add("19-Jan")
-        labels.add("20-Jan")
-        labels.add("21-Jan")
-        labels.add("22-Jan")
-        labels.add("23-Jan")
         val data = BarData(barDataSet)
-        barChart.data = data // set the data and list of lables into chart
+        // set the data and list of lables into chart
         //barDataSet.setColors(ColorTemplate.COLORFUL_COLORS)
+        data.setValueTextSize(10f)
+        data.setValueTextColor(Color.YELLOW)
         barDataSet.color = resources.getColor(R.color.colorAccent)
-
         barChart.animateY(5000)
+        barChart.data = data
 
     }
 
