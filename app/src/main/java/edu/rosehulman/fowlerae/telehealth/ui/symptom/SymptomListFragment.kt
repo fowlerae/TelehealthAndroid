@@ -78,6 +78,11 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
 
         }
 
+        if (date.qualityOfSleep != null) {
+            root.add_quality_of_sleep_text_view.text = "Quality of Sleep: ${date.qualityOfSleep}"
+            root.add_quality_of_sleep_image_view.visibility = View.GONE
+        }
+
         return root
 
     }
