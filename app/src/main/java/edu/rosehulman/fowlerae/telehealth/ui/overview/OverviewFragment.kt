@@ -19,7 +19,7 @@ class OverviewFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val root = inflater.inflate(R.layout.fragment_settings, container, false)
+        val root = inflater.inflate(R.layout.fragment_overview, container, false)
 
         val pieChart: PieChart = root.findViewById(R.id.pie_chart)
         val yValues: ArrayList<PieEntry> = ArrayList()
