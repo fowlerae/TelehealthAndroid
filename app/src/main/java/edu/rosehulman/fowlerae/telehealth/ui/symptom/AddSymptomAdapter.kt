@@ -97,4 +97,5 @@ class AddSymptomAdapter(val context: Context, val date: Date) :
 
     }
 
+
 }

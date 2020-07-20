@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import kotlinx.android.synthetic.main.dialog_add_quality_of_sleep.view.*
-import kotlinx.android.synthetic.main.fragment_symptom_list.view.*
 
 private const val ARG_DATE = "date"
 
@@ -26,6 +25,7 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
     private lateinit var listAdapter: SymptomListAdapter
     private var listener: SymptomListAdapter.OnSymptomListener? = null
     lateinit var root: View
+
 
     companion object {
         @JvmStatic
@@ -115,14 +115,15 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
 
         }
         builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
-            val quality: String? = view.add_quality_of_sleep_text_view.text.toString()
-            if (quality != null && quality.toInt() != null) {
-                date.qualityOfSleep = quality.toInt()
-            }
-            val textView: TextView? = root.findViewById(R.id.add_quality_of_sleep_text_view)
-            textView?.text = "Quality of Sleep : ${date.qualityOfSleep}"
-            val imageView: TextView? = root.findViewById(R.id.add_quality_of_sleep_image_view)
-            imageView?.visibility = View.INVISIBLE
+//            val quality: String? = view.add_quality_of_sleep_text_view.text.toString()
+//            if (quality != null && quality.toInt() != null) {
+//                date.qualityOfSleep = quality.toInt()
+//            }
+//            val textView: TextView? = root.findViewById(R.id.add_quality_of_sleep_text_view)
+//            Log.d(Constants.TAG, ${date.qualityOfSleep})
+//            textView?.text = "Quality of Sleep : ${date.qualityOfSleep}"
+//            val imageView: TextView? = root.findViewById(R.id.add_quality_of_sleep_image_view)
+//            imageView?.visibility = View.INVISIBLE
         }
 //        if (position >= 0) {
 //            builder.setNeutralButton("Delete") { _, _ ->
@@ -133,6 +134,5 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         builder.setNegativeButton(android.R.string.cancel, null)
         builder.create().show()
     }
-
 
 }
