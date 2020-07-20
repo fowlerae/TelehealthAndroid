@@ -58,6 +58,7 @@ class HomeFragment : Fragment() {
             for (x in dates) {
                 if (x.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {
                     found = true
+                    x.name = date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
                     Log.d(Constants.TAG, "Found Date: ${x.name}, ${x.qualityOfSleep},${x.id}")
                     onDateSelected(x)
                 }
