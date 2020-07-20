@@ -128,7 +128,7 @@ class SymptomListAdapter(
         }
         builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
             val quality: String? = view.add_quality_of_sleep_text_view.text.toString()
-            if (quality != null) {
+            if (quality != null && quality.toInt() != null) {
                 date.qualityOfSleep = quality.toInt()
             }
         }
