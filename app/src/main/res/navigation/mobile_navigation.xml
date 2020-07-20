@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/navigation_overview"
         android:name="edu.rosehulman.fowlerae.telehealth.ui.overview.OverviewFragment"
-        android:label="Settings"
+        android:label="Overview"
         tools:layout="@layout/fragment_overview" />
 
     <fragment
