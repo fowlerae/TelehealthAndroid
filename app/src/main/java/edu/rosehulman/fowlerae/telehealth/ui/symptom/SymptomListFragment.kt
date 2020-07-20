@@ -1,6 +1,8 @@
 package edu.rosehulman.fowlerae.telehealth.ui.symptom
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
+import kotlinx.android.synthetic.main.dialog_add_quality_of_sleep.view.*
+import kotlinx.android.synthetic.main.fragment_symptom_list.view.*
 
 private const val ARG_DATE = "date"
 
@@ -21,6 +25,7 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
     lateinit var date: Date
     private lateinit var listAdapter: SymptomListAdapter
     private var listener: SymptomListAdapter.OnSymptomListener? = null
+    private var root: View!
 
     companion object {
         @JvmStatic
@@ -38,7 +43,7 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_symptom_list, container, false)
+        root = inflater.inflate(R.layout.fragment_symptom_list, container, false)
         val recyclerView = root.findViewById<RecyclerView>(R.id.symptom_recycler_view)
         recyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -57,9 +62,9 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
             root.findViewById(R.id.add_quality_of_sleep_button_card)
         qualitySleepCardView.setOnClickListener {
             if (date.qualityOfSleep != null) {
-                listAdapter.showAddEditDialog(1)
+                showAddEditDialog(1)
             } else {
-                listAdapter.showAddEditDialog(-1)
+                showAddEditDialog(-1)
             }
 
         }
@@ -93,6 +98,40 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
             .commit()
         Log.d(Constants.TAG, "Adding add symptom fragment")
 
+    }
+
+    fun showAddEditDialog(position: Int) {
+        // pos of -1 means add
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle(if (position < 0) R.string.add_sleep_dialog_title else R.string.edit_sleep_dialog_title)
+        val view =
+            LayoutInflater.from(context).inflate(R.layout.dialog_add_quality_of_sleep, null, false)
+        builder.setView(view)
+        if (position >= 0) {
+            if (date.qualityOfSleep != null) {
+                view.quality_edit_text.setText(date.qualityOfSleep.toString())
+            }
+
+
+        }
+        builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
+            val quality: String? = view.add_quality_of_sleep_text_view.text.toString()
+            if (quality != null && quality.toInt() != null) {
+                date.qualityOfSleep = quality.toInt()
+            }
+            val textView: TextView = root.findViewById(R.id.add_quality_of_sleep_text_view)
+            textView.text = "Quality of Sleep : ${date.qualityOfSleep}"
+            val imageView: TextView = root.findViewById(R.id.add_quality_of_sleep_image_view)
+            imageView.visibility = 0
+        }
+//        if (position >= 0) {
+//            builder.setNeutralButton("Delete") { _, _ ->
+//                delete(position)
+//
+//            }
+//        }
+        builder.setNegativeButton(android.R.string.cancel, null)
+        builder.create().show()
     }
 
 
