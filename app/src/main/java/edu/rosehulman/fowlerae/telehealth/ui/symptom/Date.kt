@@ -9,10 +9,11 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Date(var name : String = "") : Parcelable {
     var qualityOfSleep: Int? = null
+    var lastTouched: Timestamp? = null
 
     @get:Exclude
     var id = ""
-    var lastTouched: Timestamp? = null
+
 
     companion object {
         const val LAST_TOUCHED_KEY = "lastTouched"

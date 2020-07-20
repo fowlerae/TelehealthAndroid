@@ -14,9 +14,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 import kotlinx.android.synthetic.main.dialog_add_quality_of_sleep.view.*
+import kotlinx.android.synthetic.main.fragment_symptom_list.view.*
 
 private const val ARG_DATE = "date"
 
@@ -25,7 +28,13 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
     private lateinit var listAdapter: SymptomListAdapter
     private var listener: SymptomListAdapter.OnSymptomListener? = null
     lateinit var root: View
-
+    private lateinit var listenerRegistration: ListenerRegistration
+    private val dates = ArrayList<Date>()
+    private val datesRef = FirebaseFirestore
+        .getInstance()
+        .collection("users")
+        .document("UGSe2Si5KAsB0sQb9Gf7")
+        .collection("dates")
 
     companion object {
         @JvmStatic
@@ -107,23 +116,19 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         val view =
             LayoutInflater.from(context).inflate(R.layout.dialog_add_quality_of_sleep, null, false)
         builder.setView(view)
+        val docRef = datesRef.document("${date.name}")
+        docRef.get().addOnSuccessListener { documentSnapshot ->
+            date = Date.fromSnapshot(documentSnapshot)
+        }
         if (position >= 0) {
             if (date.qualityOfSleep != null) {
                 view.quality_edit_text.setText(date.qualityOfSleep.toString())
             }
-
-
         }
         builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
-//            val quality: String? = view.add_quality_of_sleep_text_view.text.toString()
-//            if (quality != null && quality.toInt() != null) {
-//                date.qualityOfSleep = quality.toInt()
-//            }
-//            val textView: TextView? = root.findViewById(R.id.add_quality_of_sleep_text_view)
-//            Log.d(Constants.TAG, ${date.qualityOfSleep})
-//            textView?.text = "Quality of Sleep : ${date.qualityOfSleep}"
-//            val imageView: TextView? = root.findViewById(R.id.add_quality_of_sleep_image_view)
-//            imageView?.visibility = View.INVISIBLE
+            val quality = view.quality_edit_text.text.toString()
+            date.qualityOfSleep = quality.toInt()
+            view.add_quality_of_sleep_text_view.text = date.qualityOfSleep.toString()
         }
 //        if (position >= 0) {
 //            builder.setNeutralButton("Delete") { _, _ ->
@@ -134,5 +139,6 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         builder.setNegativeButton(android.R.string.cancel, null)
         builder.create().show()
     }
+
 
 }
