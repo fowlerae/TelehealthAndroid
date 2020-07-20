@@ -25,7 +25,7 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
     lateinit var date: Date
     private lateinit var listAdapter: SymptomListAdapter
     private var listener: SymptomListAdapter.OnSymptomListener? = null
-    private var root: View!
+    lateinit var root: View
 
     companion object {
         @JvmStatic
@@ -119,10 +119,10 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
             if (quality != null && quality.toInt() != null) {
                 date.qualityOfSleep = quality.toInt()
             }
-            val textView: TextView = root.findViewById(R.id.add_quality_of_sleep_text_view)
-            textView.text = "Quality of Sleep : ${date.qualityOfSleep}"
-            val imageView: TextView = root.findViewById(R.id.add_quality_of_sleep_image_view)
-            imageView.visibility = 0
+            val textView: TextView? = root.findViewById(R.id.add_quality_of_sleep_text_view)
+            textView?.text = "Quality of Sleep : ${date.qualityOfSleep}"
+            val imageView: TextView? = root.findViewById(R.id.add_quality_of_sleep_image_view)
+            imageView?.visibility = View.INVISIBLE
         }
 //        if (position >= 0) {
 //            builder.setNeutralButton("Delete") { _, _ ->
