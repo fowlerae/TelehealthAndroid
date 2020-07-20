@@ -59,7 +59,7 @@ class HomeFragment : Fragment() {
                 if (x.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {
                     found = true
                     Log.d(Constants.TAG, "Date: ${x.name}, ${x.qualityOfSleep},${x.id}")
-                    onDateSelected(formattedDate)
+                    onDateSelected(x)
                 }
             }
             if (!found) {
