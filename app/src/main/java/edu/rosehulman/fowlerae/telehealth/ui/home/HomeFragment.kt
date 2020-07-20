@@ -64,7 +64,7 @@ class HomeFragment : Fragment() {
             }
             if (!found) {
                 Log.d(Constants.TAG, "Date: $formattedDate")
-                datesRef.add(formattedDate)
+                datesRef.document("${formattedDate.name}").set(formattedDate)
                 onDateSelected(formattedDate)
             }
 
