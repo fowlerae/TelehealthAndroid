@@ -48,7 +48,7 @@ class OverviewFragment : Fragment() {
     private fun makeBarChart(root: View) {
         val barChart = root.findViewById(R.id.bar_chart) as BarChart
         val entries = ArrayList<BarEntry>()
-        entries.add(BarEntry(1f, 0.toFloat()))
+        entries.add(BarEntry(0f, 4.toFloat()))
         entries.add(BarEntry(1f, 1.toFloat()))
         entries.add(BarEntry(2f, 2.toFloat()))
         entries.add(BarEntry(3f, 3.toFloat()))
