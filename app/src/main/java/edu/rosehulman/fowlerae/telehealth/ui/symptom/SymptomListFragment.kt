@@ -75,9 +75,7 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
             } else {
                 showAddEditDialog(-1)
             }
-
         }
-
         if (date.qualityOfSleep != null) {
             root.add_quality_of_sleep_text_view.text = "Quality of Sleep: ${date.qualityOfSleep}"
             root.add_quality_of_sleep_image_view.visibility = View.GONE
@@ -125,11 +123,9 @@ class SymptomListFragment : Fragment(), SymptomListAdapter.OnSymptomListener {
         docRef.get().addOnSuccessListener { documentSnapshot ->
             date = Date.fromSnapshot(documentSnapshot)
         }
-        if (position >= 0) {
             if (date.qualityOfSleep != null) {
                 view.quality_edit_text.setText(date.qualityOfSleep.toString())
             }
-        }
         builder.setPositiveButton(android.R.string.ok) { _: DialogInterface?, _: Int ->
             val quality = view.quality_edit_text.text.toString()
             date.qualityOfSleep = quality.toInt()
