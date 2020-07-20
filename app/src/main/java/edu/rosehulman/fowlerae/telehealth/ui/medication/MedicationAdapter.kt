@@ -120,10 +120,10 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
             val description = view.description_edit_text.text.toString()
             val dosage: Double = view.dosage_edit_text.text.toString().toDouble()
             val frequency: Int = view.frequency_edit_text.text.toString().toInt()
-            val frequency_interval = view.frequency_edit_text.text.toString()
+            val frequencyInterval = view.frequency_edit_text.text.toString()
             val name = view.name_edit_text.text.toString()
             val time = view.time_edit_text.text.toString()
-            var prescribed: Boolean = false
+            var prescribed = false
             if (view.prescribed_edit_text.text.toString() == "Yes") {
                 prescribed = true
             }
@@ -133,7 +133,7 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
                 description,
                 dosage,
                 frequency,
-                frequency_interval,
+                frequencyInterval,
                 name,
                 time,
                 prescribed,
