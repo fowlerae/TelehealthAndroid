@@ -47,17 +47,23 @@ class OverviewFragment : Fragment() {
     private fun makeBarChart(root: View) {
         val barChart = root.findViewById(R.id.bar_chart) as BarChart
         val entries = ArrayList<BarEntry>()
-        entries.add(BarEntry(8f, 0.toFloat()))
+        entries.add(BarEntry(1f, 0.toFloat(), "18-Jan"))
         entries.add(BarEntry(2f, 1.toFloat()))
-        entries.add(BarEntry(5f, 2.toFloat()))
-        entries.add(BarEntry(20f, 3.toFloat()))
-        entries.add(BarEntry(15f, 4.toFloat()))
-        entries.add(BarEntry(19f, 5.toFloat()))
+        entries.add(BarEntry(3f, 2.toFloat()))
+        entries.add(BarEntry(4f, 3.toFloat()))
+        entries.add(BarEntry(5f, 4.toFloat()))
+        entries.add(BarEntry(9f, 5.toFloat()))
 
-        val barDataSet = BarDataSet(entries, "Cells")
+        val barDataSet = BarDataSet(entries, "Pain Rating")
         val data = BarData(barDataSet)
-        // set the data and list of lables into chart
-        //barDataSet.setColors(ColorTemplate.COLORFUL_COLORS)
+
+        val labels = ArrayList<String>()
+        labels.add("18-Jan")
+        labels.add("19-Jan")
+        labels.add("20-Jan")
+        labels.add("21-Jan")
+        labels.add("22-Jan")
+        labels.add("23-Jan")
         data.setValueTextSize(10f)
         data.setValueTextColor(Color.YELLOW)
         barDataSet.color = resources.getColor(R.color.colorAccent)
