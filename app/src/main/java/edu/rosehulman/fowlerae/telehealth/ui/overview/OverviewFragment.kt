@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
 import edu.rosehulman.fowlerae.telehealth.R
-import edu.rosehulman.fowlerae.telehealth.ui.settings.SettingsViewModel
+
 
 class OverviewFragment : Fragment() {
 
@@ -20,6 +20,16 @@ class OverviewFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_settings, container, false)
+
+        val pieChart: PieChart = root.findViewById(R.id.pie_chart)
+        val yValues: ArrayList<PieEntry> = ArrayList()
+        yValues.add(PieEntry(34f, "Ilala"))
+        yValues.add(PieEntry(56f, "Temeke"))
+        yValues.add(PieEntry(66f, "Kinondoni"))
+        yValues.add(PieEntry(45f, "Kigamboni"))
+        val dataSet = PieDataSet(yValues, "Number Of Employees")
+
+        val year = ArrayList<Any>()
 
         return root
     }
