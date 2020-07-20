@@ -55,10 +55,10 @@ class HomeFragment : Fragment() {
                 Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)))
             //      Date = dateRef.document("${formattedDate.name}")
             var found: Boolean = false
-            for (d in dates) {
-                if (d.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {
+            for (x in dates) {
+                if (x.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {
                     found = true
-                    Log.d(Constants.TAG, "Date: $d")
+                    Log.d(Constants.TAG, "Date: ${x.name}, ${x.qualityOfSleep},${x.id}")
                     onDateSelected(formattedDate)
                 }
             }
