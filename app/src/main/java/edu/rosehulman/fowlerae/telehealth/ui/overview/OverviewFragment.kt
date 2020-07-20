@@ -23,6 +23,7 @@ class OverviewFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_overview, container, false)
         makePieChart(root)
+        makeBarChart(root)
         return root
     }
 
