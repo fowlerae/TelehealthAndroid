@@ -39,10 +39,24 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Reported Pain Days"
+                android:textSize="24sp" />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/bar_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="400dp" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:text="Reported Symptom Frequency"
                 android:textSize="24sp" />
 
@@ -50,7 +64,7 @@
                 android:id="@+id/pie_chart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="200dp" />
+                android:minHeight="400dp" />
 
 
         </LinearLayout>

@@ -6,10 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.PieChart
-import com.github.mikephil.charting.data.PieData
-import com.github.mikephil.charting.data.PieDataSet
-import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.utils.ColorTemplate
 import edu.rosehulman.fowlerae.telehealth.R
 
@@ -23,7 +22,18 @@ class OverviewFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_overview, container, false)
+        makePieChart(root)
 
+
+
+
+
+
+
+        return root
+    }
+
+    private fun makePieChart(root: View) {
         val pieChart: PieChart = root.findViewById(R.id.pie_chart)
         val yValues: ArrayList<PieEntry> = ArrayList()
         yValues.add(PieEntry(34f, "Ilala"))
@@ -38,6 +48,35 @@ class OverviewFragment : Fragment() {
         pieData.setValueTextSize(10f)
         pieData.setValueTextColor(Color.YELLOW)
         pieChart.data = pieData
-        return root
     }
+
+    private fun makeBarChart(root: View) {
+        val barChart = root.findViewById(R.id.bar_chart) as BarChart
+        val entries = ArrayList<BarEntry>()
+        entries.add(BarEntry(8f, 0.toFloat()))
+        entries.add(BarEntry(2f, 1.toFloat()))
+        entries.add(BarEntry(5f, 2.toFloat()))
+        entries.add(BarEntry(20f, 3.toFloat()))
+        entries.add(BarEntry(15f, 4.toFloat()))
+        entries.add(BarEntry(19f, 5.toFloat()))
+
+        val barDataSet = BarDataSet(entries, "Cells")
+
+        val labels = ArrayList<String>()
+        labels.add("18-Jan")
+        labels.add("19-Jan")
+        labels.add("20-Jan")
+        labels.add("21-Jan")
+        labels.add("22-Jan")
+        labels.add("23-Jan")
+        val data = BarData(barDataSet)
+        barChart.data = data // set the data and list of lables into chart
+        //barDataSet.setColors(ColorTemplate.COLORFUL_COLORS)
+        barDataSet.color = resources.getColor(R.color.colorAccent)
+
+        barChart.animateY(5000)
+
+    }
+
+
 }
