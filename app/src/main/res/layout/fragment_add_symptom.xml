@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginHorizontal="20dp"
     tools:context=".ui.symptom.AddSymptomFragment"
     android:layout_marginTop="20dp">
 
@@ -18,9 +19,9 @@
 
         <EditText
             android:id="@+id/add_symptom_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
+            android:textSize="18sp"
             android:hint="@string/symptom_name"
             android:inputType="textCapWords" />
 
