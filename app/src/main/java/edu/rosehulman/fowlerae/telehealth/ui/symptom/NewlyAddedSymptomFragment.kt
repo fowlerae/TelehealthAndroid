@@ -45,12 +45,12 @@ class NewlyAddedSymptomFragment : Fragment() {
         nameTextView.text = symptom.name
         val button: Button = root.findViewById(R.id.finish_reporting_symptom_button)
         button.setOnClickListener {
-            val rating: EditText = root.findViewById(R.id.pain_rating_text_view)
-            symptom.rating = rating.text.toString().toInt()
-            val duration: EditText = root.findViewById(R.id.duration_edit_text)
-            symptom.duration = duration.text.toString().toInt()
-            val description: EditText = root.findViewById(R.id.description_text_ivew)
-            symptom.description = description.text.toString()
+            val rating: EditText? = root.findViewById(R.id.pain_rating_text_view)
+            symptom.rating = rating?.text.toString().toInt()
+            val duration: EditText? = root.findViewById(R.id.duration_edit_text)
+            symptom.duration = duration?.text.toString().toInt()
+            val description: EditText? = root.findViewById(R.id.description_text_ivew)
+            symptom.description = description?.text.toString()
             finishAddingSymptom()
         }
         return root
