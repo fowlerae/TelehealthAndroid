@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
+    android:layout_margin="20dp"
     android:layout_width="wrap_content">
 
     <LinearLayout
         android:orientation="vertical"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/name_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:hint="@string/hint_name" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_name" />
+
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:orientation="horizontal"
@@ -35,20 +47,13 @@
                     android:id="@+id/dosage_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp" />
-
-
+                    android:textSize="18sp" />
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ms" />
-
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
+                android:layout_gravity="end"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -60,7 +65,7 @@
                     android:id="@+id/frequency_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
@@ -90,6 +95,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
+            android:layout_gravity="end"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -114,6 +120,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:orientation="vertical">
 
                 <TextView
@@ -125,13 +132,14 @@
                     android:id="@+id/color_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="end"
                 android:orientation="vertical">
 
                 <TextView
@@ -143,7 +151,7 @@
                     android:id="@+id/prescribed_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:hint="Yes or No" />
             </LinearLayout>
         </LinearLayout>
@@ -162,7 +170,7 @@
                 android:id="@+id/symptom_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -181,7 +189,7 @@
                 android:id="@+id/time_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
         </LinearLayout>
 
