@@ -38,4 +38,7 @@
     <string name="date">Date</string>
     <string name="add_medication">Add Medication</string>
     <string name="add_symptom">Add Symptom</string>
+    <string name="symptom_name">Symptom Name</string>
+    <string name="report_quality_of_sleep">Report Quality of Sleep</string>
+    <string name="rate_pain_from_1_to_10">Rate pain from 1 to 10</string>
 </resources>

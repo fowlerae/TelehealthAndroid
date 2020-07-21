@@ -8,6 +8,7 @@
     app:cardElevation="3dp"
     app:cardCornerRadius="25dp"
     android:padding="4dp"
+    android:layout_margin="5dp"
     tools:context="edu.rosehulman.fowlerae.telehealth.ui.symptom.AddSymptomFragment"
     android:layout_marginHorizontal="4dp"
     app:cardBackgroundColor="@color/add_symptom_card_color"
@@ -21,15 +22,22 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/add_symptom_name"
+            android:id="@+id/add_symptom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <EditText
+            android:id="@+id/add_symptom_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:hint="@string/symptom_name" />
+
         <ImageView
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:id="@+id/add_symptom_delete_symptom_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
