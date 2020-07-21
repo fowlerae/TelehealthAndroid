@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/add_symptom_card_view"
     app:cardElevation="3dp"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="25dp"
     android:padding="4dp"
     tools:context="edu.rosehulman.fowlerae.telehealth.ui.symptom.AddSymptomFragment"
     android:layout_marginHorizontal="4dp"
@@ -16,7 +16,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="4dp"
         android:layout_height="wrap_content">
 
@@ -29,6 +29,7 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:layout_marginLeft="10dp"
             android:id="@+id/add_symptom_delete_symptom_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
