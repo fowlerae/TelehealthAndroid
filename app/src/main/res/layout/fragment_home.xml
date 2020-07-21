@@ -50,6 +50,7 @@
                     android:textSize="18sp"></TextView>
 
                 <TextView
+                    android:id="@+id/current_date"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/add_new_symptom"

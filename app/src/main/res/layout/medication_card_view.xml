@@ -37,16 +37,16 @@
                     android:layout_centerVertical="true"
                     android:text="8pm"
                     android:layout_alignLeft="@+id/medication_checkbox"
-                    android:layout_marginRight="40dp"
+                    android:layout_marginRight="80dp"
                     android:textSize="18sp" />
 
                 <CheckBox
                     android:id="@+id/medication_checkbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_gravity="center"></CheckBox>
+                    android:layout_gravity="center" />
 
         </RelativeLayout>
 

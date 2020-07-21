@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -66,6 +67,9 @@ class HomeFragment : Fragment() {
             }
 
         }
+        val currentDate: LocalDate = LocalDate.now()
+        val textView = root.findViewById<TextView>(R.id.current_date)
+        textView.text = currentDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
         addSnapshotListener()
         return root
     }
