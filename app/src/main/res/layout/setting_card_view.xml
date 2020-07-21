@@ -25,6 +25,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ellipse" />
+
             <ImageView
                 android:id="@+id/setting_image"
                 android:layout_width="wrap_content"
@@ -33,12 +39,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_centerInParent="true"
                 android:foregroundTint="@color/colorPrimaryDark" />
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/ellipse" />
 
 
         </RelativeLayout>
