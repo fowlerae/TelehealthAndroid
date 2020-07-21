@@ -37,4 +37,5 @@
     <string name="report_new_symptom">Report New Symptom</string>
     <string name="date">Date</string>
     <string name="add_medication">Add Medication</string>
+    <string name="add_symptom">Add Symptom</string>
 </resources>

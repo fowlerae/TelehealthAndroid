@@ -12,7 +12,8 @@
     app:cardBackgroundColor="@color/add_symptom_card_color"
     tools:showIn="@layout/fragment_add_symptom">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -20,9 +21,6 @@
             android:id="@+id/add_symptom_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Symptom"
-            android:layout_centerVertical="true"
-
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -31,13 +29,10 @@
             android:id="@+id/add_symptom_delete_symptom_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_alignRight="@+id/add_symptom_name"
-            android:layout_centerVertical="true"
             android:src="@drawable/ic_baseline_close_24" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>
