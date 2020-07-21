@@ -18,7 +18,6 @@ class NewlyAddedSymptomFragment : Fragment() {
 
     lateinit var date: Date
     lateinit var symptom: Symptom
-    lateinit var symptomsRef
 
     companion object {
         @JvmStatic
@@ -31,13 +30,6 @@ class NewlyAddedSymptomFragment : Fragment() {
                     putParcelable(ARG_SYMPTOM, s)
                     date = d
                     symptom = s
-                    symptomsRef = FirebaseFirestore
-                        .getInstance()
-                        .collection("users")
-                        .document("UGSe2Si5KAsB0sQb9Gf7")
-                        .collection("dates")
-                        .document(date.name)
-                        .collection("symptoms")
                 }
             }
     }
@@ -65,6 +57,13 @@ class NewlyAddedSymptomFragment : Fragment() {
     }
 
     private fun finishAddingSymptom() {
+        val symptomsRef = FirebaseFirestore
+            .getInstance()
+            .collection("users")
+            .document("UGSe2Si5KAsB0sQb9Gf7")
+            .collection("dates")
+            .document(date.name)
+            .collection("symptoms")
         symptomsRef.add(symptom)
         val fragment: SymptomListFragment = SymptomListFragment.newInstance(date)
         val fragmentManager: FragmentManager = parentFragmentManager
