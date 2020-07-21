@@ -153,8 +153,7 @@
                     android:id="@+id/prescribed_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:hint="Yes or No" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -164,7 +163,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="@string/hint_symptom" />
 
