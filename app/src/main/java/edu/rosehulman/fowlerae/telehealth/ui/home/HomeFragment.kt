@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.CalendarView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -54,23 +55,11 @@ class HomeFragment : Fragment() {
         var date = calendarView.date
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             var date = LocalDate.of(year, month + 1, dayOfMonth)
-            var formattedDate =
-                Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)))
-            var found: Boolean = false
-            for (x in dates) {
-                if (x.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {
-                    found = true
-                    x.name = date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
-                    Log.d(Constants.TAG, "Found Date: ${x.name}, ${x.qualityOfSleep},${x.id}")
-                    onDateSelected(x)
-                }
-            }
-            if (!found) {
-                Log.d(Constants.TAG, "Not found Date: $formattedDate")
-                datesRef.document("${formattedDate.name}").set(formattedDate)
-                onDateSelected(formattedDate)
-            }
-
+            selectDateHelper(date)
+        }
+        val cardView: CardView = root.findViewById(R.id.add_goal_view_card)
+        cardView.setOnClickListener {
+            selectDateHelper(currentDate)
         }
         addSnapshotListener()
         return root
@@ -120,6 +109,26 @@ class HomeFragment : Fragment() {
                     dates[index] = date
                 }
             }
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun selectDateHelper(date: LocalDate) {
+        var formattedDate =
+            Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)))
+        var found: Boolean = false
+        for (x in dates) {
+            if (x.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {
+                found = true
+                x.name = date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
+                Log.d(Constants.TAG, "Found Date: ${x.name}, ${x.qualityOfSleep},${x.id}")
+                onDateSelected(x)
+            }
+        }
+        if (!found) {
+            Log.d(Constants.TAG, "Not found Date: $formattedDate")
+            datesRef.document(formattedDate.name).set(formattedDate)
+            onDateSelected(formattedDate)
         }
     }
 
