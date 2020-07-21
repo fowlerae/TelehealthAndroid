@@ -53,7 +53,7 @@ class AddSymptomFragment() : Fragment() {
             ) {
                 if (event == null || !event.isShiftPressed()) {
                     // the user is done typing.
-                    addSymptom(v.text as String)
+                    addSymptom(v.text.toString())
                     return@setOnEditorActionListener true; // consume.
                 }
             }

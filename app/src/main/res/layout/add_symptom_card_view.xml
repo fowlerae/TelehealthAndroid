@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/add_symptom_card_view"
     app:cardElevation="3dp"
-    app:cardCornerRadius="25dp"
+    app:cardCornerRadius="15dp"
     android:padding="4dp"
     android:layout_margin="5dp"
     tools:context="edu.rosehulman.fowlerae.telehealth.ui.symptom.AddSymptomFragment"
