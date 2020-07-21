@@ -38,16 +38,17 @@ class OverviewFragment : Fragment() {
         addSnapshotListenerDates()
         makePieChart(root)
         makeBarChart(root)
+        makeLineChart(root)
         return root
     }
 
     private fun makePieChart(root: View) {
         val pieChart: PieChart = root.findViewById(R.id.pie_chart)
         val yValues: ArrayList<PieEntry> = ArrayList()
-        yValues.add(PieEntry(34f, "Ilala"))
-        yValues.add(PieEntry(56f, "Temeke"))
-        yValues.add(PieEntry(66f, "Kinondoni"))
-        yValues.add(PieEntry(45f, "Kigamboni"))
+        yValues.add(PieEntry(67f, "Migraine"))
+        yValues.add(PieEntry(10f, "Knee Pain"))
+        yValues.add(PieEntry(5f, "Light Sensitivity"))
+        yValues.add(PieEntry(19f, "Back Pain"))
         val dataSet = PieDataSet(yValues, "Number Of Employees")
         dataSet.sliceSpace = 3f
         dataSet.selectionShift = 5f
@@ -89,6 +90,10 @@ class OverviewFragment : Fragment() {
 
     }
 
+    private fun makeLineChart(root: View) {
+
+    }
+
     fun addSnapshotListenerDates() {
         listenerRegistration = datesRef
             .orderBy(Date.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
@@ -124,32 +129,5 @@ class OverviewFragment : Fragment() {
             }
         }
     }
-
-//    private fun getSymptomCounts() {
-//        val months = ArrayList<String>()
-//        months.add("Jan")
-//        months.add("Feb")
-//        months.add("Mar")
-//        months.add("Apr")
-//        months.add("May")
-//        months.add("Jun")
-//        months.add("Jul")
-//        months.add("Aug")
-//        months.add("Sept")
-//        months.add("Oct")
-//        months.add("Nov")
-//        months.add("Dec")
-//        for(month in months) {
-//            var count = 0
-//            for(date in dates) {
-//                if(date.name.contains(month)) {
-//                    datesRef.document(date.id).collection("symptoms")    .get()
-//                        .add
-//                }
-//            }
-//
-//        }
-//    }
-
 
 }

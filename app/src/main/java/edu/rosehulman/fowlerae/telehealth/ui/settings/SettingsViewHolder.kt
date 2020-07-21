@@ -12,19 +12,8 @@ import kotlinx.android.synthetic.main.setting_card_view.view.*
 class SettingsViewHolder(itemView: View, private val settingsAdapter: SettingsAdapter): RecyclerView.ViewHolder(itemView) {
     private val nameTextView: TextView = itemView.findViewById(R.id.setting_name)
     private val imageView: ImageView = itemView.findViewById(R.id.setting_image)
-    private var cardView: CardView
+    private var cardView: CardView = itemView.setting_card_view
 
-    init {
-//        itemView.setOnClickListener {
-//            listAdapter.selectMovieQuote(adapterPosition)
-//
-//        }
-//        itemView.setOnLongClickListener {
-//            listAdapter.showAddEditDialog(adapterPosition)
-//            true
-//        }
-        cardView = itemView.setting_card_view
-    }
 
     fun bind(setting: Setting) {
         nameTextView.text = setting.name
