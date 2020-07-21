@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:hint="@string/symptom_name"
-            android:capitalize="words" />
+            android:inputType="textCapWords" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/add_symptom_recycler_view"
