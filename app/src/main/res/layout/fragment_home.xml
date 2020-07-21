@@ -37,10 +37,9 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/ic_add_foreground"></ImageView>
+                    android:src="@drawable/ic_add_foreground" />
 
                 <LinearLayout
-                    android:layout_alignRight="@+id/add_goal_image"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">

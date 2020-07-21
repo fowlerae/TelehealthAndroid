@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/navigation_export"
         android:name="edu.rosehulman.fowlerae.telehealth.ui.export.ExportFragment"
-        android:label="Medications"
+        android:label="Export"
         tools:layout="@layout/fragment_export" />
 
     <fragment
