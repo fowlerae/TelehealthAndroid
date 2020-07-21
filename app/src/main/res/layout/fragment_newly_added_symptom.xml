@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.symptom.NewlyAddedSymptomFragment"
     xmlns:tools="http://schemas.android.com/tools">
@@ -12,7 +13,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="center">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/name_card_view"
@@ -45,6 +48,10 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_pain" />
 
         <EditText
             android:id="@+id/rating_edit_text"
@@ -52,5 +59,32 @@
             android:layout_height="wrap_content"
             android:hint="@string/rate_pain_from_1_to_10" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pain Duration " />
+
+        <EditText
+            android:id="@+id/duration_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Pain Duration in hours" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description " />
+
+        <EditText
+            android:id="@+id/description__edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Pain Duration in hours" />
+
+        <Button
+            android:id="@+id/finish_reporting_symptom_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Report Symptom" />
     </LinearLayout>
 </LinearLayout>
