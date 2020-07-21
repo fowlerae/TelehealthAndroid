@@ -8,12 +8,12 @@
         android:id="@+id/add_edit_quality_of_sleep_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Quality of Sleep"></TextView>
+        android:text="Report Quality of Sleep" />
 
     <EditText
         android:id="@+id/quality_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Add a quality of sleep on a scale from 1 to 10"></EditText>
+        android:hint="Rate pain from 1 to 10" />
 
 </LinearLayout>

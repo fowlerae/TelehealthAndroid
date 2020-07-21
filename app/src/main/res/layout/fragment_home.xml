@@ -41,14 +41,20 @@
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/add_new_goal"
+                    android:id="@+id/add_new_symptom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
                     android:layout_centerVertical="true"
-                    android:text="Add New Goal"
-                    android:textSize="18sp">
-                </TextView>
+                    android:text="Report New Symptom"
+                    android:textSize="18sp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/add_new_symptom"
+                    android:text="Date"
+                    android:textSize="8sp" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>

@@ -43,17 +43,13 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         adapter = context?.let { BadgeAdapter(it) }!!
         recyclerView.adapter = adapter
-      //  recyclerView.setHasFixedSize(true)
         adapter.addSnapshotListener()
         val calendarView = root.findViewById<CalendarView>(R.id.calendar_view)
         var date = calendarView.date
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             var date = LocalDate.of(year, month + 1, dayOfMonth)
-//            val formatter : DateTimeFormatter = DateTimeFormatter.ofPattern("MMMM dd, YYYYY")
-//            val output:String = formatter.format(date)
             var formattedDate =
                 Date(date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG)))
-            //      Date = dateRef.document("${formattedDate.name}")
             var found: Boolean = false
             for (x in dates) {
                 if (x.id == date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))) {

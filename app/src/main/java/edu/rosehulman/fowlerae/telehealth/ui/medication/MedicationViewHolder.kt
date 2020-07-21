@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.medication_card_view.view.*
 
 class MedicationViewHolder(itemView: View, private val medicationAdapter: MedicationAdapter): RecyclerView.ViewHolder(itemView) {
     private val nameTextView: TextView = itemView.findViewById(R.id.medication_name)
+    private val timeTextView: TextView = itemView.findViewById(R.id.medication_time)
 
     private var cardView: CardView
 
@@ -23,5 +24,6 @@ class MedicationViewHolder(itemView: View, private val medicationAdapter: Medica
 
     fun bind(med: Medication) {
         nameTextView.text = med.name
+        timeTextView.text = med.time
     }
 }
