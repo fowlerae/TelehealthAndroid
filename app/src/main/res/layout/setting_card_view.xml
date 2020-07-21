@@ -20,13 +20,26 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/setting_image"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_signout"
-            android:layout_gravity="center_horizontal"
-            android:foregroundTint="@color/colorPrimaryDark" />
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/setting_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_signout"
+                android:layout_gravity="center_horizontal"
+                android:foregroundTint="@color/colorPrimaryDark" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ellipse" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <TextView
             android:id="@+id/setting_name"
