@@ -31,7 +31,7 @@
     <string name="hint_shape">Shape</string>
     <string name="hint_dosage">Dosage</string>
     <string name="hint_name">Name</string>
-    <string name="hint_frequency">Enter a frequency</string>
+    <string name="hint_frequency">Frequency</string>
     <string name="add_sleep_dialog_title">Report Quality of Sleep</string>
     <string name="edit_sleep_dialog_title">Report Quality of Sleep</string>
     <string name="report_new_symptom">Report New Symptom</string>
