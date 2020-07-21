@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:layout_gravity="center">
@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             app:cardElevation="15dp"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content">
 
             <RelativeLayout
@@ -83,6 +84,7 @@
 
         <Button
             android:id="@+id/finish_reporting_symptom_button"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Report Symptom" />
