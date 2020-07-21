@@ -31,7 +31,6 @@
 
 
         <ImageView
-            android:layout_marginStart="10dp"
             android:id="@+id/add_symptom_delete_symptom_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
