@@ -24,21 +24,21 @@
             android:id="@+id/pain_rating_text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="12sp"
+            android:textSize="24sp"
             android:text="Pain Rating" />
 
         <TextView
             android:id="@+id/pain_duration_text_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="12sp"
+            android:textSize="24sp"
             android:text="Pain Duration" />
 
         <TextView
             android:id="@+id/description_text_ivew"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="12sp"
+            android:textSize="24sp"
             android:text="Description" />
 
 
