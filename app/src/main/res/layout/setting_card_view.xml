@@ -20,7 +20,7 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -31,15 +31,17 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_signout"
                 android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
                 android:foregroundTint="@color/colorPrimaryDark" />
 
             <View
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
                 android:background="@drawable/ellipse" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
 
         <TextView
