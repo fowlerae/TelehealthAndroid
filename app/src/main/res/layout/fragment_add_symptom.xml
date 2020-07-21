@@ -26,7 +26,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/add_symptom_recycler_view"
-            android:layout_width="@dimen/material_emphasis_high_type"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
 
