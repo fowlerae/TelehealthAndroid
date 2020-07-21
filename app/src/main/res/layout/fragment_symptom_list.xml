@@ -55,6 +55,7 @@
                 android:id="@+id/add_quality_of_sleep_button_card"
                 android:padding="5dp"
                 android:layout_margin="5dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:layout_centerHorizontal="true"
@@ -93,7 +94,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/add_symptom_button_card"
                 android:padding="5dp"
-                android:layout_margin="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:layout_centerHorizontal="true"
