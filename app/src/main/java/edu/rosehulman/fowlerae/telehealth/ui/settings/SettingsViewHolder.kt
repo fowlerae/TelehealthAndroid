@@ -28,12 +28,16 @@ class SettingsViewHolder(itemView: View, private val settingsAdapter: SettingsAd
 
     fun bind(setting: Setting) {
         nameTextView.text = setting.name
-
+        getIcon(setting)
     }
 
     fun getIcon(setting: Setting) {
         when (setting.name) {
             "Privacy Policy" -> imageView.setImageResource(R.drawable.ic_security)
+            "Notifications" -> imageView.setImageResource(R.drawable.ic_notifications)
+            "Terms of Use" -> imageView.setImageResource(R.drawable.ic_terms)
+            "Sign Out" -> imageView.setImageResource(R.drawable.ic_signout)
+            "Doctor's Office" -> imageView.setImageResource(R.drawable.ic_doctor)
         }
     }
 }
