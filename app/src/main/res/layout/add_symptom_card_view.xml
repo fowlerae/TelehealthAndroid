@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/add_symptom_card_view_text"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:minWidth="50dp"
             android:textColor="@color/white"
             android:textSize="24sp"
@@ -32,6 +32,7 @@
 
 
         <ImageView
+            android:layout_marginStart="10dp"
             android:id="@+id/add_symptom_delete_symptom_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
