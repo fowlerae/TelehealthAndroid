@@ -17,6 +17,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="5dp">
 
                 <TextView
@@ -35,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="8pm"
-                    android:layout_alignRight="@+id/medication_checkbox"
+                    android:layout_alignLeft="@+id/medication_checkbox"
                     android:layout_marginRight="40dp"
                     android:textSize="18sp" />
 
