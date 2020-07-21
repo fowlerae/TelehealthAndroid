@@ -61,6 +61,8 @@ class MainActivity : AppCompatActivity() {
                 Log.d(Constants.TAG, "Photo: ${user.photoUrl}")
                 Log.d(Constants.TAG, "Phone: ${user.phoneNumber}")
                 switchToHomeFragment(user.uid)
+            } else {
+                launchLoginUI()
             }
         }
     }
