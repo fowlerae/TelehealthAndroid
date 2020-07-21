@@ -32,7 +32,7 @@
             android:textSize="24sp"
             android:textColor="#FFF"
             android:textStyle="bold"
-            android:maxHeight="264dp"
+            android:maxHeight="164dp"
             android:maxWidth="285dp"
             android:textAlignment="center" />
 
