@@ -30,23 +30,27 @@
                     android:paddingHorizontal="7dp"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/medication_time"
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:layout_centerVertical="true"
-                    android:text="8pm"
-                    android:layout_alignLeft="@+id/medication_checkbox"
-                    android:layout_marginRight="80dp"
-                    android:textSize="18sp" />
+                    android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:id="@+id/medication_checkbox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center" />
+                        <TextView
+                            android:id="@+id/medication_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="8pm"
+                            android:textSize="18sp" />
+
+                        <CheckBox
+                            android:id="@+id/medication_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                </LinearLayout>
+
 
         </RelativeLayout>
 
