@@ -46,6 +46,11 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
         adapter.addSnapshotListener()
         val calendarView = root.findViewById<CalendarView>(R.id.calendar_view)
+
+        val currentDate: LocalDate = LocalDate.now()
+        val textView = root.findViewById<TextView>(R.id.current_date)
+        textView.text = currentDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
+
         var date = calendarView.date
         calendarView.setOnDateChangeListener { view, year, month, dayOfMonth ->
             var date = LocalDate.of(year, month + 1, dayOfMonth)
@@ -67,9 +72,6 @@ class HomeFragment : Fragment() {
             }
 
         }
-        val currentDate: LocalDate = LocalDate.now()
-        val textView = root.findViewById<TextView>(R.id.current_date)
-        textView.text = currentDate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG))
         addSnapshotListener()
         return root
     }
