@@ -53,3 +53,4 @@
             android:hint="@string/rate_pain_from_1_to_10" />
 
     </LinearLayout>
+</LinearLayout>

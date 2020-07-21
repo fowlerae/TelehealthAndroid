@@ -29,12 +29,6 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/add_symptom_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:hint="@string/symptom_name" />
 
         <ImageView
             android:layout_marginStart="10dp"
