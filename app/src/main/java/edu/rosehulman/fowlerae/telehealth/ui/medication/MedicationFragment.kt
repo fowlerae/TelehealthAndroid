@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +40,12 @@ class MedicationFragment : Fragment() {
         Log.d(Constants.TAG, "Time: $output")
         val date = root.findViewById<TextView>(R.id.date_text_view)
         date.text = output
+
+        val addMed: CardView = root.findViewById(R.id.add_medication_button_card)
+        addMed.setOnClickListener {
+            adapter.showAddEditDialog(-1)
+        }
+
         return root
     }
 }
