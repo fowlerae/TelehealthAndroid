@@ -39,13 +39,17 @@ class SymptomFragment() : Fragment() {
         val root = inflater.inflate(R.layout.fragment_symptom, container, false)
 
         val symptomName: TextView = root.findViewById(R.id.symptom_fragment_name_text_view)
-        symptomName.text = symptom.name
+        var string: String = "Symptom Name: ${symptom.name}"
+        symptomName.text = string
         val painRating = root.findViewById<TextView>(R.id.pain_rating_text_view)
-        painRating.text = symptom.rating.toString()
+        string = "Symptom Pain Rating: ${symptom.rating.toString()}"
+        painRating.text = string
         val symptomDescription = root.findViewById<TextView>(R.id.description_text_ivew)
-        symptomDescription.text = symptom.description
+        string = "Description: ${symptom.description}"
+        symptomDescription.text = string
         val painDuration = root.findViewById<TextView>(R.id.pain_duration_text_view)
-        symptomDescription.text = symptom.duration.toString()
+        string = "Symptom Duration: symptom.duration.toString() hours"
+        painDuration.text = string
         return root
     }
 }
