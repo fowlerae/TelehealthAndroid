@@ -17,12 +17,13 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/setting_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_signout"
             android:foregroundTint="@color/colorPrimaryDark" />
 
@@ -30,9 +31,6 @@
             android:id="@+id/setting_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Log out"
-            android:layout_centerInParent="true"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_margin="10dp" />
