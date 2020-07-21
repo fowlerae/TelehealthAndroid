@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.fowlerae.telehealth.R
-import kotlinx.android.synthetic.main.medication_card_view.view.*
+import kotlinx.android.synthetic.main.setting_card_view.view.*
 
 
 class SettingsViewHolder(itemView: View, private val settingsAdapter: SettingsAdapter): RecyclerView.ViewHolder(itemView) {
@@ -23,7 +23,7 @@ class SettingsViewHolder(itemView: View, private val settingsAdapter: SettingsAd
 //            listAdapter.showAddEditDialog(adapterPosition)
 //            true
 //        }
-        cardView = itemView.medication_card_view
+        cardView = itemView.setting_card_view
     }
 
     fun bind(setting: Setting) {
