@@ -2,9 +2,9 @@ package edu.rosehulman.fowlerae.telehealth.ui.settings
 
 import android.content.Context
 import android.util.Log
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.*
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
@@ -24,7 +24,7 @@ class SettingsAdapter(val context: Context) : RecyclerView.Adapter<SettingsViewH
 
     fun addSnapshotListener() {
         listenerRegistration = settingsRef
-            .orderBy(Setting.LAST_TOUCHED_KEY, Query.Direction.ASCENDING)
+            .orderBy(Setting.CREATED_KEY, Query.Direction.DESCENDING)
             .addSnapshotListener { querySnapshot, e ->
                 if (e != null) {
                     Log.w(Constants.TAG, "listen error", e)
