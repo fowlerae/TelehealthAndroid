@@ -32,8 +32,9 @@
             android:textSize="24sp"
             android:textColor="#FFF"
             android:textStyle="bold"
-            android:maxHeight="274dp"
-            android:maxWidth="295dp" />
+            android:maxHeight="264dp"
+            android:maxWidth="285dp"
+            android:textAlignment="center" />
 
     </RelativeLayout>
 
