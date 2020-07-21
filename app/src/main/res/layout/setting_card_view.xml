@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="200dp"
     android:id="@+id/setting_card_view"
     app:cardElevation="3dp"
     android:padding="4dp"
@@ -13,23 +13,32 @@
     android:layout_marginHorizontal="4dp"
     tools:showIn="@layout/fragment_home">
 
-    <ImageView
-        android:id="@+id/setting_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_account_circle_24"
-        android:backgroundTint="@color/colorPrimaryDark"></ImageView>
 
-    <TextView
-        android:id="@+id/setting_name"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Log out"
-        android:layout_centerInParent="true"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_margin="10dp" />
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/setting_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:foregroundTint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/setting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Log out"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp" />
+
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
