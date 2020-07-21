@@ -12,7 +12,7 @@ class AddSymptomViewHolder(itemView: View, private val symptomAdapter: AddSympto
     RecyclerView.ViewHolder(itemView) {
 
     private var cardView: CardView = itemView.add_symptom_card_view
-    private val nameTextView: TextView? = itemView.findViewById(R.id.add_symptom_name)
+    private val nameTextView: TextView? = itemView.findViewById(R.id.add_symptom_card_view_text)
     private val closeImageView: ImageView =
         itemView.findViewById(R.id.add_symptom_delete_symptom_image_view)
 
