@@ -45,8 +45,6 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         adapter = context?.let { BadgeAdapter(it) }!!
         recyclerView.adapter = adapter
-
-        (recyclerView.layoutManager as LinearLayoutManager).scrollToPosition(2);
         adapter.addSnapshotListener()
         val calendarView = root.findViewById<CalendarView>(R.id.calendar_view)
 
@@ -64,6 +62,8 @@ class HomeFragment : Fragment() {
             selectDateHelper(currentDate)
         }
         addSnapshotListener()
+
+        recyclerView.scrollToPosition(3)
         return root
     }
 
