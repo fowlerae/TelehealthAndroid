@@ -42,9 +42,7 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val recyclerView = root.findViewById<RecyclerView>(R.id.badge_recycler_view) as RecyclerView
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        layoutManager.scrollToPositionWithOffset(3, 0)
-
-
+        layoutManager.scrollToPosition(3)
         recyclerView.layoutManager = layoutManager
         adapter = context?.let { BadgeAdapter(it) }!!
         recyclerView.adapter = adapter
