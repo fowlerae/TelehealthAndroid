@@ -48,7 +48,7 @@ class OverviewFragment : Fragment() {
         yValues.add(PieEntry(10f, "Knee Pain"))
         yValues.add(PieEntry(5f, "Light Sensitivity"))
         yValues.add(PieEntry(19f, "Back Pain"))
-        val dataSet = PieDataSet(yValues, "Number Of Employees")
+        val dataSet = PieDataSet(yValues, "Symptom")
         dataSet.sliceSpace = 3f
         dataSet.selectionShift = 5f
         dataSet.setColors(*ColorTemplate.COLORFUL_COLORS)
