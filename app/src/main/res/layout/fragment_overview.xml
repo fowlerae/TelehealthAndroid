@@ -26,7 +26,7 @@
                         android:id="@+id/rectangle_4"
                         android:layout_width="295dp"
                         android:layout_height="174dp"
-                        android:background="@drawable/daily_view_card" />
+                        android:background="@drawable/symptom_overview" />
 
                     <TextView
                         android:id="@+id/date_fragment_text_view"

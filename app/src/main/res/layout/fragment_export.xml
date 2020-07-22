@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.export.ExportFragment"
-    android:layout_marginTop="20dp">
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/rectangle_3"
+            android:layout_width="295dp"
+            android:layout_height="174dp"
+            android:background="@drawable/generate_report" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/generate_report"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:maxHeight="164dp"
+            android:maxWidth="285dp"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
