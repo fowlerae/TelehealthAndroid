@@ -6,32 +6,46 @@
     tools:context=".ui.export.ExportFragment"
     android:layout_marginTop="50dp">
 
-    <RelativeLayout
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:elevation="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/rectangle_3"
+                android:layout_width="295dp"
+                android:layout_height="174dp"
+                android:background="@drawable/generate_report" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/generate_report"
+                android:layout_centerInParent="true"
+                android:textSize="24sp"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+                android:maxHeight="164dp"
+                android:maxWidth="285dp"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:orientation="vertical">
-
-        <View
-            android:id="@+id/rectangle_3"
-            android:layout_width="295dp"
-            android:layout_height="174dp"
-            android:background="@drawable/generate_report" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/generate_report"
-            android:layout_centerInParent="true"
-            android:textSize="24sp"
-            android:textColor="#FFF"
-            android:textStyle="bold"
-            android:maxHeight="164dp"
-            android:maxWidth="285dp"
-            android:textAlignment="center" />
-
-    </RelativeLayout>
-
+        android:layout_margin="40dp"
+        android:text="Share your data with doctors, family, and friends to show them your progress from the last two weeks" />
 
 </RelativeLayout>
