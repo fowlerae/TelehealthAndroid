@@ -11,11 +11,23 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
+    <!--    <fragment-->
+    <!--        android:id="@+id/navigation_medications"-->
+    <!--        android:name="edu.rosehulman.fowlerae.telehealth.ui.medication.MedicationFragment"-->
+    <!--        android:label="Medications"-->
+    <!--        tools:layout="@layout/fragment_medication" />-->
+
     <fragment
         android:id="@+id/navigation_medications"
         android:name="edu.rosehulman.fowlerae.telehealth.ui.medication.MedicationFragment"
         android:label="Medications"
         tools:layout="@layout/fragment_medication" />
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/navigation_export"-->
+    <!--        android:name="edu.rosehulman.fowlerae.telehealth.ui.export.ExportFragment"-->
+    <!--        android:label="Export"-->
+    <!--        tools:layout="@layout/fragment_export" />-->
 
     <fragment
         android:id="@+id/navigation_export"
@@ -23,11 +35,23 @@
         android:label="Export"
         tools:layout="@layout/fragment_export" />
 
+    <!--    <fragment-->
+    <!--        android:id="@+id/navigation_overview"-->
+    <!--        android:name="edu.rosehulman.fowlerae.telehealth.ui.overview.OverviewFragment"-->
+    <!--        android:label="Overview"-->
+    <!--        tools:layout="@layout/fragment_overview" />-->
+
     <fragment
         android:id="@+id/navigation_overview"
         android:name="edu.rosehulman.fowlerae.telehealth.ui.overview.OverviewFragment"
-        android:label="Overview"
+        android:label="@string/title_home"
         tools:layout="@layout/fragment_overview" />
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/navigation_settings"-->
+    <!--        android:name="edu.rosehulman.fowlerae.telehealth.ui.settings.SettingsFragment"-->
+    <!--        android:label="Settings"-->
+    <!--        tools:layout="@layout/fragment_settings" />-->
 
     <fragment
         android:id="@+id/navigation_settings"
