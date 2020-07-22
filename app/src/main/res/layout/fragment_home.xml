@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_margin="10dp"
-        android:paddingBottom="150dp"
+        android:paddingBottom="80dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -90,12 +90,6 @@
                 android:layout_marginVertical="4dp"></CalendarView>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textSize="28sp"
-            android:textStyle="bold" />
 
     </LinearLayout>
 
