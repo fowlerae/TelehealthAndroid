@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Educational Resources"
-            android:textSize="20sp" />
+            android:textSize="28sp" />
 
 
     </LinearLayout>
@@ -29,6 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="American Academy of Pain Medicine" />
 
 
@@ -36,6 +37,7 @@
             android:id="@+id/link1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="https://painmed.org/" />
 
     </LinearLayout>
@@ -50,6 +52,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="American Chronic Pain Association" />
 
         <TextView
@@ -71,6 +74,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="Chronic Pain Research Alliance" />
 
         <TextView
@@ -91,6 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="Gloabl Pain Initiative" />
 
         <TextView
@@ -111,6 +116,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="Pain News Network" />
 
         <TextView
