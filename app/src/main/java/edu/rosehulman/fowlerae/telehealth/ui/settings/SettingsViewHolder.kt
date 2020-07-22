@@ -11,8 +11,7 @@ import kotlinx.android.synthetic.main.setting_card_view.view.*
 
 class SettingsViewHolder(
     itemView: View,
-    private val settingsAdapter: SettingsAdapter,
-    val listener: OnSettingSelectedListener
+    private val settingsAdapter: SettingsAdapter
 ) : RecyclerView.ViewHolder(itemView) {
     private val nameTextView: TextView = itemView.findViewById(R.id.setting_name)
     private val imageView: ImageView = itemView.findViewById(R.id.setting_image)
@@ -35,12 +34,10 @@ class SettingsViewHolder(
             "Doctor's Office" -> imageView.setImageResource(R.drawable.ic_doctor)
             "Educational Resources" -> {
                 imageView.setImageResource(R.drawable.ic_educational)
-                listener.onSettingSelected()
+                settingsAdapter.listener.onSettingSelected()
             }
         }
     }
 
-    interface OnSettingSelectedListener {
-        fun onSettingSelected()
-    }
+
 }

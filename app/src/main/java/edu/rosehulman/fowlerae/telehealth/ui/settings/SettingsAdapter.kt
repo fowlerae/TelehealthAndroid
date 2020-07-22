@@ -9,12 +9,14 @@ import com.google.firebase.firestore.*
 import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 
-class SettingsAdapter(val context: Context) : RecyclerView.Adapter<SettingsViewHolder>() {
+class SettingsAdapter(val context: Context, val listener: OnSettingSelectedListener) :
+    RecyclerView.Adapter<SettingsViewHolder>() {
     private val settings = ArrayList<Setting>()
     private val settingsRef = FirebaseFirestore
         .getInstance()
         .collection("settings")
     private lateinit var listenerRegistration: ListenerRegistration
+
     init {
         Log.d(Constants.TAG, "settingRef: ${settingsRef.get()}")
         Log.d(Constants.TAG, "Size: ${settings.size}")
@@ -90,6 +92,10 @@ class SettingsAdapter(val context: Context) : RecyclerView.Adapter<SettingsViewH
 
     private fun delete(position: Int) {
         settingsRef.document(settings[position].id).delete()
+    }
+
+    interface OnSettingSelectedListener {
+        fun onSettingSelected()
     }
 
 

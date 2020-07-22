@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.rosehulman.fowlerae.telehealth.EducationalFragment
 import edu.rosehulman.fowlerae.telehealth.R
 
-class SettingsFragment : Fragment(),
-    SettingsViewHolder.OnSettingSelectedListener {
+class SettingsFragment : Fragment(), SettingsAdapter.OnSettingSelectedListener {
 
     private lateinit var adapter: SettingsAdapter
 
@@ -26,7 +25,7 @@ class SettingsFragment : Fragment(),
         val recyclerView =
             root.findViewById<RecyclerView>(R.id.setting_recycler_view) as RecyclerView
         recyclerView.layoutManager = GridLayoutManager(context, 2)
-        adapter = context?.let { SettingsAdapter(it) }!!
+        adapter = context?.let { SettingsAdapter(it, this) }!!
         recyclerView.adapter = adapter
         //   recyclerView.setHasFixedSize(true)
         adapter.addSnapshotListener()
