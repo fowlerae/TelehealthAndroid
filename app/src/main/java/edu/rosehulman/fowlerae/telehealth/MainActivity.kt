@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.firebase.ui.auth.AuthUI
+import com.google.android.gms.auth.api.credentials.Credentials
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 //            } else {
 //                launchLoginUI()
 //            }
-            auth.signOut()
+            Credentials.getClient(this).disableAutoSignIn();
             launchLoginUI()
         }
     }
