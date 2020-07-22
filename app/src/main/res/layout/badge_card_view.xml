@@ -36,11 +36,11 @@
             android:layout_alignParentBottom="true"
             android:layout_height="wrap_content">
 
-            <View
-                android:id="@+id/twitter"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@drawable/twitter_logo" />
+            <!--            <View-->
+            <!--                android:id="@+id/twitter"-->
+            <!--                android:layout_width="24dp"-->
+            <!--                android:layout_height="24dp"-->
+            <!--                android:background="@drawable/twitter_logo" />-->
 
             <View
                 android:layout_width="24dp"
