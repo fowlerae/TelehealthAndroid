@@ -9,7 +9,11 @@ import edu.rosehulman.fowlerae.telehealth.R
 import kotlinx.android.synthetic.main.setting_card_view.view.*
 
 
-class SettingsViewHolder(itemView: View, private val settingsAdapter: SettingsAdapter): RecyclerView.ViewHolder(itemView) {
+class SettingsViewHolder(
+    itemView: View,
+    private val settingsAdapter: SettingsAdapter,
+    val listener: OnSettingSelectedListener
+) : RecyclerView.ViewHolder(itemView) {
     private val nameTextView: TextView = itemView.findViewById(R.id.setting_name)
     private val imageView: ImageView = itemView.findViewById(R.id.setting_image)
     private var cardView: CardView = itemView.setting_card_view
@@ -25,8 +29,18 @@ class SettingsViewHolder(itemView: View, private val settingsAdapter: SettingsAd
             "Privacy Policy" -> imageView.setImageResource(R.drawable.ic_security)
             "Notifications" -> imageView.setImageResource(R.drawable.ic_notifications)
             "Terms of Use" -> imageView.setImageResource(R.drawable.ic_terms)
-            "Sign Out" -> imageView.setImageResource(R.drawable.ic_signout)
+            "Sign Out" -> {
+                imageView.setImageResource(R.drawable.ic_signout)
+            }
             "Doctor's Office" -> imageView.setImageResource(R.drawable.ic_doctor)
+            "Educational Resources" -> {
+                imageView.setImageResource(R.drawable.ic_educational)
+                listener.onSettingSelected()
+            }
         }
+    }
+
+    interface OnSettingSelectedListener {
+        fun onSettingSelected()
     }
 }

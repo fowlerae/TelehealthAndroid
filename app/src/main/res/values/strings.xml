@@ -43,5 +43,5 @@
     <string name="rate_pain_from_1_to_10">Rate pain from 1 to 10</string>
     <string name="rate_pain">Rate Pain</string>
     <string name="generate_report">Generate Report</string>
-    <string name="share_text_view">Share your data with doctors, family, and friends to show them your progress from the last two weeks</string>
+    <string name="share_text_view">Share your data with doctors, family, and friends to show them your progress from the last two weeks!</string>
 </resources>
