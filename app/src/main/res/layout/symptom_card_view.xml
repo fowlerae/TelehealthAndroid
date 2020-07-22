@@ -34,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="8pm"
-            android:layout_alignParentRight="true"
             android:textAlignment="center"
             android:textSize="18sp" />
 
