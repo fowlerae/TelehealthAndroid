@@ -62,12 +62,12 @@ class OverviewFragment : Fragment() {
         val barChart = root.findViewById(R.id.bar_chart) as BarChart
         val entries = ArrayList<BarEntry>()
 
-        entries.add(BarEntry(0f, 4.toFloat()))
-        entries.add(BarEntry(1f, 1.toFloat()))
-        entries.add(BarEntry(2f, 2.toFloat()))
-        entries.add(BarEntry(3f, 3.toFloat()))
-        entries.add(BarEntry(4f, 4.toFloat()))
-        entries.add(BarEntry(5f, 5.toFloat()))
+        entries.add(BarEntry(0f, 6.toFloat()))
+        entries.add(BarEntry(1f, 8.toFloat()))
+        entries.add(BarEntry(2f, 5.toFloat()))
+        entries.add(BarEntry(3f, 7.toFloat()))
+        entries.add(BarEntry(4f, 10.toFloat()))
+        entries.add(BarEntry(5f, 9.toFloat()))
 
         val barDataSet = BarDataSet(entries, "Pain Rating")
         val data = BarData(barDataSet)
