@@ -68,7 +68,7 @@
                             android:id="@+id/add_new_symptom"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="8dp"
                             android:text="@string/report_new_symptom"
                             android:textSize="18sp" />
 
