@@ -36,6 +36,7 @@ class OverviewFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_overview, container, false)
         addSnapshotListenerDates()
+        getActionBar().setDisplayHomeAsUpEnabled(false);
         makePieChart(root)
         makeBarChart(root)
         return root
