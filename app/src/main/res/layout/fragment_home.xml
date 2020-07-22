@@ -19,7 +19,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/badge_recycler_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="200dp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/add_goal_view_card"
