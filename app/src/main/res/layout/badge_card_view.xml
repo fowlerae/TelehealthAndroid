@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
@@ -9,8 +8,7 @@
     app:cardElevation="3dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="edu.rosehulman.fowlerae.telehealth.ui.home.HomeFragment"
-    android:layout_marginHorizontal="4dp"
-    tools:showIn="@layout/fragment_home">
+    android:layout_marginHorizontal="4dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -23,36 +21,6 @@
             android:layout_height="174dp"
             android:background="@drawable/badge_card" />
 
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_above="@+id/share_icons"-->
-        <!--            android:text="Share" />-->
-
-        <!--        <LinearLayout-->
-        <!--            android:id="@+id/share_icons"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_alignParentRight="true"-->
-        <!--            android:layout_alignParentBottom="true"-->
-        <!--            android:layout_height="wrap_content">-->
-
-        <!--            &lt;!&ndash;            <View&ndash;&gt;-->
-        <!--            &lt;!&ndash;                android:id="@+id/twitter"&ndash;&gt;-->
-        <!--            &lt;!&ndash;                android:layout_width="24dp"&ndash;&gt;-->
-        <!--            &lt;!&ndash;                android:layout_height="24dp"&ndash;&gt;-->
-        <!--            &lt;!&ndash;                android:background="@drawable/twitter_logo" />&ndash;&gt;-->
-
-        <!--            <View-->
-        <!--                android:layout_width="24dp"-->
-        <!--                android:layout_height="24dp"-->
-        <!--                android:background="@drawable/instagram_logo" />-->
-
-        <!--            <View-->
-        <!--                android:layout_width="11dp"-->
-        <!--                android:layout_height="20dp"-->
-        <!--                android:background="@drawable/facebook_logo" />-->
-
-        <!--        </LinearLayout>-->
 
         <TextView
             android:id="@+id/name_text_view"
