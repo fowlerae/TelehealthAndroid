@@ -30,14 +30,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="American Academy of Pain Medicine" />
+            android:text="American Academy of Pain Medicine:" />
 
 
         <TextView
             android:id="@+id/link1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:autoLink="web"
             android:text="https://painmed.org/" />
 
     </LinearLayout>
@@ -53,12 +53,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="American Chronic Pain Association" />
+            android:text="American Chronic Pain Association:" />
 
         <TextView
             android:id="@+id/link2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoLink="web"
             android:text="https://www.theacpa.org/" />
 
 
@@ -75,12 +76,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Chronic Pain Research Alliance" />
+            android:text="Chronic Pain Research Alliance:" />
 
         <TextView
             android:id="@+id/link3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoLink="web"
             android:text="http://www.chronicpainresearch.org/site/index" />
 
     </LinearLayout>
@@ -96,12 +98,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Gloabl Pain Initiative" />
+            android:text="Gloabl Pain Initiative:" />
 
         <TextView
             android:id="@+id/link4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoLink="web"
             android:text="https://www.globalpaininitiative.org/" />
 
     </LinearLayout>
@@ -117,12 +120,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Pain News Network" />
+            android:text="Pain News Network:" />
 
         <TextView
             android:id="@+id/link5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:autoLink="web"
             android:text="https://www.painnewsnetwork.org/" />
     </LinearLayout>
 
