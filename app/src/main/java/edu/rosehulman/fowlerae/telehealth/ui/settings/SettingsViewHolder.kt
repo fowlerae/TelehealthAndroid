@@ -18,6 +18,7 @@ class SettingsViewHolder(
     private var cardView: CardView = itemView.setting_card_view
 
 
+
     fun bind(setting: Setting) {
         nameTextView.text = setting.name
         getIcon(setting)
@@ -34,7 +35,9 @@ class SettingsViewHolder(
             "Doctor's Office" -> imageView.setImageResource(R.drawable.ic_doctor)
             "Educational Resources" -> {
                 imageView.setImageResource(R.drawable.ic_educational)
-                settingsAdapter.listener.onSettingSelected()
+                cardView.setOnClickListener {
+                    settingsAdapter.listener.onSettingSelected()
+                }
             }
         }
     }
