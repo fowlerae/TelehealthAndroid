@@ -38,7 +38,6 @@ class OverviewFragment : Fragment() {
         addSnapshotListenerDates()
         makePieChart(root)
         makeBarChart(root)
-        makeLineChart(root)
         return root
     }
 
@@ -90,9 +89,6 @@ class OverviewFragment : Fragment() {
 
     }
 
-    private fun makeLineChart(root: View) {
-
-    }
 
     fun addSnapshotListenerDates() {
         listenerRegistration = datesRef
