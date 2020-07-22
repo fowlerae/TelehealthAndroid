@@ -52,6 +52,7 @@
 
                     <ImageView
                         android:id="@+id/add_goal_image"
+                        android:layout_marginTop="2dp"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center_vertical"
@@ -67,6 +68,7 @@
                             android:id="@+id/add_new_symptom"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
                             android:text="@string/report_new_symptom"
                             android:textSize="18sp" />
 
