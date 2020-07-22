@@ -44,10 +44,10 @@ class SymptomFragment() : Fragment() {
         val painRating = root.findViewById<TextView>(R.id.pain_rating_text_view)
         string = "Symptom Pain Rating: ${symptom.rating}"
         painRating.text = string
-        val symptomDescription = root.findViewById<TextView>(R.id.description_text_ivew)
+        val symptomDescription = root.findViewById<TextView>(R.id.newly_added_description_text_view)
         string = "Description: ${symptom.description}"
         symptomDescription.text = string
-        val painDuration = root.findViewById<TextView>(R.id.pain_duration_text_view)
+        val painDuration = root.findViewById<TextView>(R.id.newly_added_pain_duration_text_view)
         string = "Symptom Duration: ${symptom.duration} minutes"
         painDuration.text = string
         return root

@@ -133,7 +133,6 @@ class MedicationAdapter(val context: Context) : RecyclerView.Adapter<MedicationV
                 description,
                 dosage,
                 frequency,
-                frequencyInterval,
                 name,
                 time,
                 prescribed,

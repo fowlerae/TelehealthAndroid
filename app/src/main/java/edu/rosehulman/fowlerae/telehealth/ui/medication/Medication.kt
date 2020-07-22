@@ -13,7 +13,6 @@ data class Medication(
     var description: String? = "",
     var dosage: Double? = 0.0,
     var frequency: Int? = 0,
-    var frequency_interval: String? = "",
     var name: String? = "",
     var time: String? = "",
     var prescribed: Boolean? = false,
