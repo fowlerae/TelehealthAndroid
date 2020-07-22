@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.export.ExportFragment"
     android:layout_marginTop="50dp">
@@ -46,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="40dp"
+        android:textSize="18sp"
         android:text="Share your data with doctors, family, and friends to show them your progress from the last two weeks" />
 
-</RelativeLayout>
+</LinearLayout>
