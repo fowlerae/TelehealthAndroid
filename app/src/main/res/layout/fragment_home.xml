@@ -19,7 +19,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/badge_recycler_view"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:scrollbarAlwaysDrawHorizontalTrack="true" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/add_goal_view_card"

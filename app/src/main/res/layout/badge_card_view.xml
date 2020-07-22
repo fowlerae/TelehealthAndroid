@@ -2,8 +2,8 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="295dp"
+    android:layout_height="174dp"
     android:id="@+id/badge_card_view"
     app:cardElevation="3dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -11,8 +11,8 @@
     android:layout_marginHorizontal="4dp">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="295dp"
+        android:layout_height="174dp"
         android:orientation="vertical">
 
         <View
