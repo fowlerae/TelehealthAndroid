@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
 //            } else {
 //                launchLoginUI()
 //            }
+            auth.signOut()
             launchLoginUI()
         }
     }
