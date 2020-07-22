@@ -1,11 +1,13 @@
 package edu.rosehulman.fowlerae.telehealth.ui.symptom
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import edu.rosehulman.fowlerae.telehealth.Constants
 import edu.rosehulman.fowlerae.telehealth.R
 
 
@@ -27,6 +29,7 @@ class SymptomFragment() : Fragment() {
                     putParcelable(ARG_SYMPTOM, s)
                     date = d
                     symptom = s
+                    Log.d(Constants.TAG, "Symptom: $symptom")
                 }
             }
     }
