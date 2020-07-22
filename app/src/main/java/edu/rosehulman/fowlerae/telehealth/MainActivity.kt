@@ -10,7 +10,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.firebase.ui.auth.AuthUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import edu.rosehulman.fowlerae.telehealth.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -60,21 +59,12 @@ class MainActivity : AppCompatActivity() {
                 Log.d(Constants.TAG, "Email: ${user.email}")
                 Log.d(Constants.TAG, "Photo: ${user.photoUrl}")
                 Log.d(Constants.TAG, "Phone: ${user.phoneNumber}")
-                switchToHomeFragment(user.uid)
             } else {
                 launchLoginUI()
             }
         }
     }
 
-
-    private fun switchToHomeFragment(uid: String) {
-        val ft = supportFragmentManager.beginTransaction()
-        val fragment: HomeFragment = HomeFragment()
-        ft.replace(R.id.nav_host_fragment, fragment)
-            .addToBackStack("home")
-            .commit()
-    }
 
     private fun launchLoginUI() {
         // TODO: Build a login intent and startActivityForResult(intent, ...)
