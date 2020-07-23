@@ -53,16 +53,15 @@ class MainActivity : AppCompatActivity() {
         authListener = FirebaseAuth.AuthStateListener { auth ->
             val user = auth.currentUser
             Log.d(Constants.TAG, "In auth listener, User: $user")
-//            if (user != null) {
-//                Log.d(Constants.TAG, "UID: ${user.uid}")
-//                Log.d(Constants.TAG, "Name: ${user.displayName}")
-//                Log.d(Constants.TAG, "Email: ${user.email}")
-//                Log.d(Constants.TAG, "Photo: ${user.photoUrl}")
-//                Log.d(Constants.TAG, "Phone: ${user.phoneNumber}")
-//            } else {
-//                launchLoginUI()
-//            }
-            launchLoginUI()
+            if (user != null) {
+                Log.d(Constants.TAG, "UID: ${user.uid}")
+                Log.d(Constants.TAG, "Name: ${user.displayName}")
+                Log.d(Constants.TAG, "Email: ${user.email}")
+                Log.d(Constants.TAG, "Photo: ${user.photoUrl}")
+                Log.d(Constants.TAG, "Phone: ${user.phoneNumber}")
+            } else {
+                launchLoginUI()
+            }
         }
     }
 
